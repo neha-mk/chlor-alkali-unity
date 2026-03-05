@@ -3,13 +3,13 @@
 public class ElectronMover : MonoBehaviour
 {
     public Transform[] pathPoints;
-    public float speed = 2f;
+    public float speed = 1f;
 
-    private int currentIndex = 0;
+    int currentIndex = 0;
 
     void Update()
     {
-        if (pathPoints == null || pathPoints.Length == 0)
+        if (pathPoints.Length == 0)
             return;
 
         Transform target = pathPoints[currentIndex];
@@ -20,13 +20,13 @@ public class ElectronMover : MonoBehaviour
             speed * Time.deltaTime
         );
 
-        if (Vector3.Distance(transform.position, target.position) < 0.01f)
+        if (Vector3.Distance(transform.position, target.position) < 0.02f)
         {
             currentIndex++;
 
             if (currentIndex >= pathPoints.Length)
             {
-                Destroy(gameObject);   // 🔥 Destroy at end
+                Destroy(gameObject);
             }
         }
     }

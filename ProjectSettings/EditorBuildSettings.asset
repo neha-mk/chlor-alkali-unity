@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Cell View.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
+    path: Assets/Scenes/Industrial View.unity
+    guid: d0b8c0a0d41e3364fb98f0815d276498
+  - enabled: 1
     path: Assets/Scenes/Welcome Scene.unity
     guid: 904bb860e9540014e845a86a571c73e7
   - enabled: 1

@@ -5,10 +5,10 @@ public class ElectronSpawner : MonoBehaviour
     public GameObject electronPrefab;
     public Transform[] pathPoints;
 
-    public float spawnRate = 0.2f;   // time between spawns
-    public float speed = 2f;
+    public float spawnRate = 0.09f;   // constant electron count
+    public float speed = 1f;
 
-    private float timer = 0f;
+    float timer = 0f;
 
     void Update()
     {
