@@ -17,6 +17,7 @@ public class UIManager : MonoBehaviour
 
     public void ShowInfo(string title, string description)
     {
+        Debug.Log("Showing info panel");
         if(infoPanel == null || titleText == null || descriptionText == null)
         {
             Debug.LogError("UIManager references not set!");

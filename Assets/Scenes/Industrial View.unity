@@ -866,6 +866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d67edd371d624251bb634cc952fb35e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractiveEquipment
+  hoverCursor: {fileID: 0}
   hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!64 &276145243
 MeshCollider:
@@ -1743,7 +1744,7 @@ PrefabInstance:
     - target: {fileID: -8796700238505885752, guid: b8fe9a946f374644ca1f2e01ac4fd256, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 71c8ae80ecadb4dd886e3577d6a01b1a, type: 2}
+      objectReference: {fileID: 2100000, guid: f5e3926c26435425f9523871a35868ab, type: 2}
     - target: {fileID: -8679921383154817045, guid: b8fe9a946f374644ca1f2e01ac4fd256, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.45212
@@ -1795,15 +1796,15 @@ PrefabInstance:
     - target: {fileID: -5938510336390780491, guid: b8fe9a946f374644ca1f2e01ac4fd256, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 71c8ae80ecadb4dd886e3577d6a01b1a, type: 2}
+      objectReference: {fileID: 2100000, guid: f5e3926c26435425f9523871a35868ab, type: 2}
     - target: {fileID: -3673377789958856128, guid: b8fe9a946f374644ca1f2e01ac4fd256, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 71c8ae80ecadb4dd886e3577d6a01b1a, type: 2}
+      objectReference: {fileID: 2100000, guid: f5e3926c26435425f9523871a35868ab, type: 2}
     - target: {fileID: -1586072316843607336, guid: b8fe9a946f374644ca1f2e01ac4fd256, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 71c8ae80ecadb4dd886e3577d6a01b1a, type: 2}
+      objectReference: {fileID: 2100000, guid: f5e3926c26435425f9523871a35868ab, type: 2}
     - target: {fileID: 919132149155446097, guid: b8fe9a946f374644ca1f2e01ac4fd256, type: 3}
       propertyPath: m_Name
       value: Cl2Tank
@@ -1811,11 +1812,11 @@ PrefabInstance:
     - target: {fileID: 2290787034342153985, guid: b8fe9a946f374644ca1f2e01ac4fd256, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 71c8ae80ecadb4dd886e3577d6a01b1a, type: 2}
+      objectReference: {fileID: 2100000, guid: f5e3926c26435425f9523871a35868ab, type: 2}
     - target: {fileID: 8975548690973388266, guid: b8fe9a946f374644ca1f2e01ac4fd256, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 71c8ae80ecadb4dd886e3577d6a01b1a, type: 2}
+      objectReference: {fileID: 2100000, guid: f5e3926c26435425f9523871a35868ab, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1941,7 +1942,7 @@ PrefabInstance:
     - target: {fileID: -5697603070190438517, guid: 4a3bda02386399248b4dbbcd1ae49918, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 71c8ae80ecadb4dd886e3577d6a01b1a, type: 2}
+      objectReference: {fileID: 2100000, guid: f5e3926c26435425f9523871a35868ab, type: 2}
     - target: {fileID: -4716121725947478455, guid: 4a3bda02386399248b4dbbcd1ae49918, type: 3}
       propertyPath: m_Materials.Array.size
       value: 1
@@ -1953,7 +1954,7 @@ PrefabInstance:
     - target: {fileID: -3004863580174189930, guid: 4a3bda02386399248b4dbbcd1ae49918, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 71c8ae80ecadb4dd886e3577d6a01b1a, type: 2}
+      objectReference: {fileID: 2100000, guid: f5e3926c26435425f9523871a35868ab, type: 2}
     - target: {fileID: 919132149155446097, guid: 4a3bda02386399248b4dbbcd1ae49918, type: 3}
       propertyPath: m_Name
       value: H2Tank
@@ -1961,19 +1962,19 @@ PrefabInstance:
     - target: {fileID: 3615146090976386483, guid: 4a3bda02386399248b4dbbcd1ae49918, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 71c8ae80ecadb4dd886e3577d6a01b1a, type: 2}
+      objectReference: {fileID: 2100000, guid: f5e3926c26435425f9523871a35868ab, type: 2}
     - target: {fileID: 3972188771723465566, guid: 4a3bda02386399248b4dbbcd1ae49918, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 71c8ae80ecadb4dd886e3577d6a01b1a, type: 2}
+      objectReference: {fileID: 2100000, guid: f5e3926c26435425f9523871a35868ab, type: 2}
     - target: {fileID: 5441300253158725022, guid: 4a3bda02386399248b4dbbcd1ae49918, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 71c8ae80ecadb4dd886e3577d6a01b1a, type: 2}
+      objectReference: {fileID: 2100000, guid: f5e3926c26435425f9523871a35868ab, type: 2}
     - target: {fileID: 7194916201317946718, guid: 4a3bda02386399248b4dbbcd1ae49918, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 71c8ae80ecadb4dd886e3577d6a01b1a, type: 2}
+      objectReference: {fileID: 2100000, guid: f5e3926c26435425f9523871a35868ab, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2139,7 +2140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1005795753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2597,6 +2598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d67edd371d624251bb634cc952fb35e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractiveEquipment
+  hoverCursor: {fileID: 0}
   hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!114 &1172453502
 MonoBehaviour:
@@ -2654,6 +2656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d67edd371d624251bb634cc952fb35e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractiveEquipment
+  hoverCursor: {fileID: 0}
   hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!114 &1187409961
 MonoBehaviour:
@@ -3207,6 +3210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d67edd371d624251bb634cc952fb35e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractiveEquipment
+  hoverCursor: {fileID: 0}
   hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!64 &1504013463
 MeshCollider:
@@ -3320,6 +3324,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d67edd371d624251bb634cc952fb35e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractiveEquipment
+  hoverCursor: {fileID: 0}
   hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!114 &1546642754
 MonoBehaviour:
@@ -3700,7 +3705,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d67edd371d624251bb634cc952fb35e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractiveEquipment
-  hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
+  hoverCursor: {fileID: 0}
+  hoverColor: {r: 1, g: 1, b: 1, a: 0.56078434}
 --- !u!1001 &1759284902
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4022,6 +4028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d67edd371d624251bb634cc952fb35e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractiveEquipment
+  hoverCursor: {fileID: 0}
   hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!64 &1930069566
 MeshCollider:
@@ -4166,6 +4173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d67edd371d624251bb634cc952fb35e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InteractiveEquipment
+  hoverCursor: {fileID: 0}
   hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
 --- !u!1 &2021692232 stripped
 GameObject:
