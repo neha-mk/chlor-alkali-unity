@@ -23,7 +23,10 @@ public class CellClickController : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
-            if (Physics.Raycast(ray, out hit))
+            // if (Physics.Raycast(ray, out hit))
+            int layerMask = ~LayerMask.GetMask("Ions");
+
+            if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
             {
                 if (hit.transform.root == industrialCell)
                 {
