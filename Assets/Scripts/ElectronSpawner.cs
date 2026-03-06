@@ -5,8 +5,10 @@ public class ElectronSpawner : MonoBehaviour
     public GameObject electronPrefab;
     public Transform[] pathPoints;
 
-    public float spawnRate = 0.09f;   // constant electron count
+    public float spawnRate = 0.02f;   // faster spawning
     public float speed = 1f;
+
+    public int maxElectrons = 200;
 
     float timer = 0f;
 
@@ -14,7 +16,9 @@ public class ElectronSpawner : MonoBehaviour
     {
         timer += Time.deltaTime;
 
-        if (timer >= spawnRate)
+        int currentElectrons = GameObject.FindGameObjectsWithTag("Electron").Length;
+
+        if (timer >= spawnRate && currentElectrons < maxElectrons)
         {
             SpawnElectron();
             timer = 0f;
@@ -28,6 +32,8 @@ public class ElectronSpawner : MonoBehaviour
             pathPoints[0].position,
             Quaternion.identity
         );
+
+        e.tag = "Electron";
 
         ElectronMover mover = e.AddComponent<ElectronMover>();
         mover.pathPoints = pathPoints;

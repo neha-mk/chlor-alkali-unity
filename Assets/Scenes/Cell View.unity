@@ -375,7 +375,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -929,7 +929,7 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     gravitySource: 0
-    maxNumParticles: 10
+    maxNumParticles: 7
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -5548,13 +5548,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.99939084, z: -0.03489949, w: 0}
-  m_LocalPosition: {x: -5, y: 1, z: 42}
+  m_LocalRotation: {x: 0.0017439498, y: 0.9992275, z: -0.03925972, w: 0.00006851991}
+  m_LocalPosition: {x: -5, y: 0.5, z: 41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 4, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 4.5, y: 180, z: 0.2}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6511,7 +6511,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -11464,7 +11464,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -11531,7 +11531,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 3
       scalar: 12
-      minScalar: 50
+      minScalar: 10
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -14260,7 +14260,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     separateAxes: 0
-    frequency: 0.7
+    frequency: 0.5
     damping: 1
     octaves: 1
     octaveMultiplier: 0.5
@@ -16246,18 +16246,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SimulationController
   currentSlider: {fileID: 1566999323}
-  currentText: {fileID: 1872187752}
-  ionSystems:
-  - {fileID: 836038199}
-  - {fileID: 599093654}
-  - {fileID: 781389428}
-  - {fileID: 1471323998}
-  - {fileID: 2120609459}
-  - {fileID: 639958211}
-  gasSystems:
-  - {fileID: 1943351021}
-  - {fileID: 1663624524}
-  electronSystem: {fileID: 1472864671}
+  electronSpawner: {fileID: 1472864671}
+  ps1: {fileID: 836038199}
+  ps2: {fileID: 599093654}
+  ps3: {fileID: 781389428}
+  ps4: {fileID: 1471323998}
+  ps5: {fileID: 639958211}
+  ps6: {fileID: 2120609459}
 --- !u!4 &775865898
 Transform:
   m_ObjectHideFlags: 0
@@ -16403,7 +16398,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -19198,7 +19193,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    separateAxes: 1
+    separateAxes: 0
     frequency: 0.5
     damping: 1
     octaves: 1
@@ -21117,6 +21112,66 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
+--- !u!1 &809223746
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 809223748}
+  - component: {fileID: 809223747}
+  m_Layer: 0
+  m_Name: StartupController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &809223747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809223746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b254026acc84a9f4f95f00111ef55f63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StartupSequence
+  liquidSystems:
+  - {fileID: 862346876}
+  - {fileID: 1839425915}
+  - {fileID: 1250699849}
+  ionSystems:
+  - {fileID: 2120609459}
+  - {fileID: 639958211}
+  - {fileID: 1471323998}
+  - {fileID: 781389428}
+  - {fileID: 599093654}
+  - {fileID: 836038199}
+  - {fileID: 117877768}
+  - {fileID: 815057754}
+  gasSystems:
+  - {fileID: 1943351021}
+  - {fileID: 1663624524}
+--- !u!4 &809223748
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809223746}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.42435, y: -0.60276, z: 32.57905}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &815057751
 GameObject:
   m_ObjectHideFlags: 0
@@ -21247,7 +21302,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -21801,7 +21856,7 @@ ParticleSystem:
         m_RotationOrder: 4
     randomizeRotationDirection: 0
     gravitySource: 0
-    maxNumParticles: 10
+    maxNumParticles: 7
     customEmitterVelocity: {x: 0, y: 0, z: 0}
     size3D: 0
     rotation3D: 0
@@ -26135,7 +26190,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -41732,7 +41787,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -44367,7 +44422,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
   NoiseModule:
-    enabled: 0
+    enabled: 1
     strength:
       serializedVersion: 2
       minMaxState: 0
@@ -44527,7 +44582,7 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    separateAxes: 1
+    separateAxes: 0
     frequency: 0.5
     damping: 1
     octaves: 1
@@ -46482,8 +46537,9 @@ MonoBehaviour:
   - {fileID: 338156425}
   - {fileID: 1190239233}
   - {fileID: 1958557107}
-  spawnRate: 0.09
+  spawnRate: 0.02
   speed: 1
+  maxElectrons: 300
 --- !u!4 &1472864672
 Transform:
   m_ObjectHideFlags: 0
@@ -46538,7 +46594,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 504, y: -224}
-  m_SizeDelta: {x: 500, y: 100}
+  m_SizeDelta: {x: 560, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1566999323
 MonoBehaviour:
@@ -46585,7 +46641,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 444146045}
   m_Direction: 0
   m_MinValue: 2500
-  m_MaxValue: 4500
+  m_MaxValue: 5500
   m_WholeNumbers: 1
   m_Value: 2500
   m_OnValueChanged:
@@ -46742,7 +46798,7 @@ Transform:
   m_GameObject: {fileID: 1663624521}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -46845,7 +46901,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -48290,8 +48346,8 @@ ParticleSystem:
     x:
       serializedVersion: 2
       minMaxState: 3
-      scalar: -0.2
-      minScalar: 0.1
+      scalar: 0.1
+      minScalar: -0.1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -48343,8 +48399,8 @@ ParticleSystem:
     y:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.5
-      minScalar: 0.8
+      scalar: 0.3
+      minScalar: 0.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -56811,7 +56867,7 @@ Transform:
   m_GameObject: {fileID: 1943351018}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.5, z: 0}
+  m_LocalPosition: {x: 0, y: -0.5, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -56914,7 +56970,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -57734,7 +57790,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 9
+      scalar: 10
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -58359,7 +58415,7 @@ ParticleSystem:
     x:
       serializedVersion: 2
       minMaxState: 3
-      scalar: -0.2
+      scalar: -0.1
       minScalar: 0.1
       maxCurve:
         serializedVersion: 2
@@ -58412,8 +58468,8 @@ ParticleSystem:
     y:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.5
-      minScalar: 0.8
+      scalar: 0.3
+      minScalar: 0.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -62111,7 +62167,7 @@ ParticleSystem:
   emitterVelocityMode: 1
   looping: 1
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
@@ -64907,7 +64963,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     separateAxes: 0
-    frequency: 0.7
+    frequency: 0.5
     damping: 1
     octaves: 1
     octaveMultiplier: 0.5
@@ -66839,3 +66895,4 @@ SceneRoots:
   - {fileID: 1179257168}
   - {fileID: 775865898}
   - {fileID: 1044785284}
+  - {fileID: 809223748}

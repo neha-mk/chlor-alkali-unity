@@ -1,16 +1,24 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class SimulationController : MonoBehaviour
 {
     public Slider currentSlider;
-    public TextMeshProUGUI currentText;
 
-    public ParticleSystem[] ionSystems;
-    public ParticleSystem[] gasSystems;
+    public ElectronSpawner electronSpawner;
 
-    public ElectronSpawner electronSystem;
+    // 6 particle system slots
+    public ParticleSystem ps1;
+    public ParticleSystem ps2;
+    public ParticleSystem ps3;
+    public ParticleSystem ps4;
+    public ParticleSystem ps5;
+    public ParticleSystem ps6;
+
+    float baseIonSpeed = 0.4f;
+
+    float baseElectronSpeed = 1f;
+    float baseSpawnRate = 0.09f;
 
     void Start()
     {
@@ -20,40 +28,37 @@ public class SimulationController : MonoBehaviour
 
     void UpdateSimulation(float current)
     {
-        currentText.text = current.ToString("0") + " A/m²";
-
         float factor = current / 2500f;
 
-        // Ion behaviour
-        float ionSpeed = 0.15f * factor * 2f;
-        float emissionRate = 40f * factor * 3f;
-        float turbulence = 0.05f * factor * 2f;
+        //----------------------------------
+        // ELECTRONS
+        //----------------------------------
 
-        // Gas bubbles
-        float bubbleRate = 6f * factor * 4f;
+        electronSpawner.speed = baseElectronSpeed * factor;
 
-        // Electron speed only (spawn rate stays constant)
-        float electronSpeed = 1f * factor * 3f;
+        // decrease spawnRate so electrons remain dense
+        electronSpawner.spawnRate = baseSpawnRate / factor;
 
-        foreach (ParticleSystem ps in ionSystems)
-        {
-            var main = ps.main;
-            main.startSpeed = ionSpeed;
+        //----------------------------------
+        // PARTICLE SYSTEMS
+        //----------------------------------
 
-            var emission = ps.emission;
-            emission.rateOverTime = emissionRate;
+        UpdateParticles(ps1, factor);
+        UpdateParticles(ps2, factor);
+        UpdateParticles(ps3, factor);
+        UpdateParticles(ps4, factor);
+        UpdateParticles(ps5, factor);
+        UpdateParticles(ps6, factor);
+    }
 
-            var noise = ps.noise;
-            noise.strength = turbulence;
-        }
+    void UpdateParticles(ParticleSystem ps, float factor)
+    {
+        if (ps == null) return;
 
-        foreach (ParticleSystem gas in gasSystems)
-        {
-            var emission = gas.emission;
-            emission.rateOverTime = bubbleRate;
-        }
+        var main = ps.main;
+        main.startSpeed = baseIonSpeed * factor;
 
-        // Only electron speed changes
-        electronSystem.speed = electronSpeed;
+        var emission = ps.emission;
+        emission.rateOverTime = 40 * factor;
     }
 }
