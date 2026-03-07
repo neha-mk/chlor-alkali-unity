@@ -5273,6 +5273,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuideManager
   guideText: {fileID: 1900509398}
   guidePanel: {fileID: 158611405}
+  steps:
+  - Welcome inside the Electrolysis Cell.
+  - This cell contains an anode and cathode separated by a membrane.
+  - Watch how sodium chloride solution is converted into chlorine, hydrogen, and
+    sodium hydroxide.
 --- !u!114 &158611408
 MonoBehaviour:
   m_ObjectHideFlags: 0

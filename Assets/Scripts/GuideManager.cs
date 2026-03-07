@@ -1,6 +1,5 @@
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
 
 public class GuideManager : MonoBehaviour
 {
@@ -9,12 +8,8 @@ public class GuideManager : MonoBehaviour
     public TextMeshProUGUI guideText;
     public GameObject guidePanel;
 
-    string[] steps =
-    {
-        "Welcome to the Chlor-Alkali Electrolysis Plant.",
-        "Move around and hover over the equipments. You can click on the equipments to view detailed information about them.",
-        "You can also click on the 'Industrial Cell' to explore how chlor-alkali process works."
-    };
+    [TextArea(2,5)]
+    public string[] steps;   // Now editable per scene in Inspector
 
     int currentStep = 0;
 
@@ -25,7 +20,10 @@ public class GuideManager : MonoBehaviour
 
     void Start()
     {
-        guideText.text = steps[currentStep];
+        if (steps.Length > 0)
+        {
+            guideText.text = steps[currentStep];
+        }
     }
 
     public void NextStep()
