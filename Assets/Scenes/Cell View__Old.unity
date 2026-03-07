@@ -36512,9 +36512,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: Power Source
-  equipmentDescription: "Power Source: high-current DC rectifier\n\nOutput Voltage
-    : 3 V\nTotal stack voltage: 3*n\LOutput current: 20000-45000 A\nCurrent Density
-    : 2.5kA/m2 \u2013 5.5 kA/m2\n"
+  equipmentDescription: "Power Source: High-current DC rectifier\n\nOutput Voltage
+    : 3 V per stack\nCurrent Density : 2.5kA/m2 \u2013 5.5 kA/m2\n"
 --- !u!65 &1321290196
 BoxCollider:
   m_ObjectHideFlags: 0
