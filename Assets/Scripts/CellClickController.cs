@@ -55,6 +55,13 @@ public class CellClickController : MonoBehaviour
         float duration = 1.4f;
         float time = 0f;
 
+
+        // If Electrolyzer is clicked
+        if (GuideManager.Instance != null) {
+            Debug.Log("Hiding guide");
+            GuideManager.Instance.HideGuide();
+        }
+
         while (time < duration)
         {
             focusEquipment.localPosition = Vector3.Lerp(startPos, targetPos, time / duration);
@@ -85,7 +92,7 @@ public class CellClickController : MonoBehaviour
         focusEquipment.localRotation = targetRot;
 
         Debug.Log("Rotation complete");
-
+        
 
         // STEP 6 — Load Scene 2
         SceneManager.LoadScene("Cell View");

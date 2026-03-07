@@ -4,19 +4,24 @@ using UnityEngine.UI;
 
 public class GuideManager : MonoBehaviour
 {
+    public static GuideManager Instance;
+
     public TextMeshProUGUI guideText;
     public GameObject guidePanel;
 
     string[] steps =
     {
         "Welcome to the Chlor-Alkali Electrolysis Plant.",
-        // "You can rotate the plant using the mouse.",
-        // "Scroll to zoom in and out.",
         "Move around and hover over the equipments. You can click on the equipments to view detailed information about them.",
         "You can also click on the 'Industrial Cell' to explore how chlor-alkali process works."
     };
 
     int currentStep = 0;
+
+    void Awake()
+    {
+        Instance = this;
+    }
 
     void Start()
     {
@@ -37,6 +42,11 @@ public class GuideManager : MonoBehaviour
     }
 
     public void SkipTutorial()
+    {
+        guidePanel.SetActive(false);
+    }
+
+    public void HideGuide()
     {
         guidePanel.SetActive(false);
     }
