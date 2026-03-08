@@ -34,4 +34,12 @@ public class UIManager : MonoBehaviour
         Debug.Log("Hiding info panel");
         infoPanel.SetActive(false);
     }
+
+    public void ShowParticleLegend()
+{
+    ShowInfo(
+        "Particle Legend",
+        "Cl₂ → Chlorine Gas\nH₂ → Hydrogen Gas\nNaOH → Sodium Hydroxide"
+    );
+}
 }
