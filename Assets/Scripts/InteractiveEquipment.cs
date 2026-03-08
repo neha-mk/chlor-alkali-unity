@@ -33,7 +33,6 @@ public class InteractiveEquipment : MonoBehaviour
 
     void OnMouseExit()
     {
-        Debug.Log("OnMouseExit: " + data.equipmentName);
         rend.material.color = originalColor;
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
 
@@ -45,7 +44,8 @@ public class InteractiveEquipment : MonoBehaviour
 
     void OnMouseDown()
     {
-        Debug.Log("OnMouseDown: " + data.equipmentName);
+        Debug.Log("Showing infoPanel cause InteractiveEquipment was clicked");
+
         UIManager.instance.ShowInfo(
             data.equipmentName,
             data.equipmentDescription
