@@ -1,13 +1,15 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class SimulationController : MonoBehaviour
 {
     public Slider currentSlider;
 
+    public TextMeshProUGUI currentText;   // <-- add this
+
     public ElectronSpawner electronSpawner;
 
-    // 6 particle system slots
     public ParticleSystem ps1;
     public ParticleSystem ps2;
     public ParticleSystem ps3;
@@ -23,11 +25,15 @@ public class SimulationController : MonoBehaviour
     void Start()
     {
         currentSlider.onValueChanged.AddListener(UpdateSimulation);
+
         UpdateSimulation(currentSlider.value);
     }
 
     void UpdateSimulation(float current)
     {
+        // Update text
+        currentText.text = current.ToString("0") + " A/m²";
+
         float factor = current / 2500f;
 
         //----------------------------------
@@ -35,8 +41,6 @@ public class SimulationController : MonoBehaviour
         //----------------------------------
 
         electronSpawner.speed = baseElectronSpeed * factor;
-
-        // decrease spawnRate so electrons remain dense
         electronSpawner.spawnRate = baseSpawnRate / factor;
 
         //----------------------------------
