@@ -12,10 +12,15 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI titleText;
     public TextMeshProUGUI descriptionText;
 
-    // for legend
+    // for legend image
     public GameObject legendPanel;
     public Image legendImage;
     public Sprite particleLegendSprite;
+
+    // for equations image
+    public GameObject equationsPanel;
+    public Image equationsImage;
+    public Sprite equationsSprite;
     
 
     void Awake()
@@ -54,6 +59,7 @@ public class UIManager : MonoBehaviour
     public void ShowParticleLegend()
     {
         infoPanel.SetActive(false);
+        equationsPanel.SetActive(false);
         // if legenPanel is already active, do nothing
         if(legendPanel.activeSelf)        {
             legendPanel.SetActive(false);
@@ -62,5 +68,18 @@ public class UIManager : MonoBehaviour
         } 
         legendPanel.SetActive(true);
         legendImage.sprite = particleLegendSprite;
+    }
+    public void ShowEquations()
+    {
+        infoPanel.SetActive(false);
+        legendPanel.SetActive(false);
+        // if equationsPanel is already active, do nothing
+        if(equationsPanel.activeSelf)        {
+            equationsPanel.SetActive(false);
+            equationsImage.sprite = null;
+            return;
+        } 
+        equationsPanel.SetActive(true);
+        equationsImage.sprite = equationsSprite;
     }
 }
