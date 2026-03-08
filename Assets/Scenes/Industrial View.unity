@@ -3017,6 +3017,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GuideManager
   guideText: {fileID: 1809502768}
   guidePanel: {fileID: 804818995}
+  steps:
+  - Welcome to the Chlor-Alkali Electrolysis Plant.
+  - Move around and hover over the equipments. You can click on the equipments to
+    view detailed information about them.
+  - You can also click on the 'Industrial Cell' to explore how chlor-alkali process
+    works.
 --- !u!1 &824415770 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3ee5250bf08d0f34fb6cc0de6506c7fe, type: 3}
@@ -3693,9 +3699,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -5272121566671356725, guid: bcff8cf4222f83644abdf091dbd324c7, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2003917890}
-    - targetCorrespondingSourceObject: {fileID: -5272121566671356725, guid: bcff8cf4222f83644abdf091dbd324c7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2003917895}
   m_SourcePrefab: {fileID: 100100000, guid: bcff8cf4222f83644abdf091dbd324c7, type: 3}
 --- !u!1 &1110501822 stripped
 GameObject:
@@ -6178,18 +6181,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InteractiveEquipment
   hoverCursor: {fileID: 2800000, guid: beded1f36e0e74cb9873c682fd89dd46, type: 3}
   hoverColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
---- !u!114 &2003917895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2003917882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7215e6432058844d081e27cf56e245d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TooltipData
 --- !u!1 &2021692232 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4a3bda02386399248b4dbbcd1ae49918, type: 3}
