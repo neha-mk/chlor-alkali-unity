@@ -22,6 +22,10 @@ public class UIManager : MonoBehaviour
     public Image equationsImage;
     public Sprite equationsSprite;
     
+    // for formulas image
+    public GameObject formulasPanel;
+    public Image formulasImage;
+    public Sprite formulasSprite;
 
     void Awake()
     {
@@ -60,6 +64,7 @@ public class UIManager : MonoBehaviour
     {
         infoPanel.SetActive(false);
         equationsPanel.SetActive(false);
+        formulasPanel.SetActive(false);
         // if legenPanel is already active, do nothing
         if(legendPanel.activeSelf)        {
             legendPanel.SetActive(false);
@@ -73,6 +78,7 @@ public class UIManager : MonoBehaviour
     {
         infoPanel.SetActive(false);
         legendPanel.SetActive(false);
+        formulasPanel.SetActive(false);
         // if equationsPanel is already active, do nothing
         if(equationsPanel.activeSelf)        {
             equationsPanel.SetActive(false);
@@ -81,5 +87,19 @@ public class UIManager : MonoBehaviour
         } 
         equationsPanel.SetActive(true);
         equationsImage.sprite = equationsSprite;
+    }
+    public void ShowFormulas()
+    {
+        infoPanel.SetActive(false);
+        legendPanel.SetActive(false);
+        equationsPanel.SetActive(false);
+        // if formulasPanel is already active, do nothing
+        if(formulasPanel.activeSelf)        {
+            formulasPanel.SetActive(false);
+            formulasImage.sprite = null;
+            return;
+        } 
+        formulasPanel.SetActive(true);
+        formulasImage.sprite = formulasSprite;
     }
 }
