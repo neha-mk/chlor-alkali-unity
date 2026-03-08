@@ -1291,9 +1291,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: 'Pump: Centrifugal Pump'
-  equipmentDescription: 'Flow rate : 10-200 m3/h
+  equipmentDescription: 'Flow rate: 10-200 m3/h
 
-    Pressure : 1-6 bar'
+    Pressure: 1-6 bar'
 --- !u!114 &276145242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1407,13 +1407,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a6d8c92a2c1846faaa59361599da9db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
-  equipmentName: Compressor
-  equipmentDescription: 'Centrifugal compressor
+  equipmentName: 'Compressor : Centrifugal compressor '
+  equipmentDescription: 'Capacity : 1000-10000 kg/h
 
-    Capacity : 1000-10000 kg/h
-
-    Discharge
-    pressure: 10-50 bar'
+    Discharge pressure: 10-50
+    bar'
 --- !u!65 &344801119
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1884,9 +1882,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: Electrolyzer Stack
-  equipmentDescription: "Number of cells (n):  38\nCurrent : 2.5 \u2013 4.5 kA/m2\nConnection:
-    Bipolar stack\LConnection type: Series connection (Stacking cells in series,
-    current remains same in all cells, but the voltage adds up. Less Heat loss.)"
+  equipmentDescription: "Number of cells: 38\nCurrent: 2.5 \u2013 7.0  kA/m2\nVoltage:
+    129.58 V\nConnection: Bipolar stack\LConnection type: Series connection (Stacking
+    cells in series, current remains same in all cells, but the voltage adds up.
+    Less Heat loss.)"
 --- !u!114 &487230158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3432,6 +3431,9 @@ MonoBehaviour:
   infoPanel: {fileID: 1005795752}
   titleText: {fileID: 765792251}
   descriptionText: {fileID: 739938272}
+  legendPanel: {fileID: 0}
+  legendImage: {fileID: 0}
+  particleLegendSprite: {fileID: 0}
 --- !u!1 &1018530778 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4049234768581238101, guid: 3ee5250bf08d0f34fb6cc0de6506c7fe, type: 3}
@@ -3831,11 +3833,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: Chlorine Gas tank
-  equipmentDescription: "Product : Chlorine gas \n- Two phased \u2013 Liquid at the
-    bottom and gas at the top) \n- At high pressure chlorine gas coverts to liquid
-    phase. Reduces storage volume.\n\nConcentration: 99.9% \nOperating Temperature:
-    40 C\nOperating Pressure : 10 bar\nDensity:  0.0035 g/cm3 (Gas Phase), 1.47 g/cm3
-    (Liquid phase)\nMaterial : Carbon steel"
+  equipmentDescription: "Product: Chlorine gas (Two phased \u2013 Liquid at the bottom
+    and gas at the top) At high pressure chlorine gas coverts to liquid phase. Reduces
+    storage volume.\nPurity: 99.9% \nOperating Temperature: 40 C\nOperating Pressure:
+    10 bar\nDensity:  0.0035 g/cm3 (Gas Phase), 1.47 g/cm3 (Liquid phase)\nMaterial:
+    Carbon steel"
 --- !u!1 &1187409952 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4273239327366897131, guid: 0a0eb5fc353629b4dacbc5e40d303e19, type: 3}
@@ -3906,7 +3908,9 @@ MonoBehaviour:
     pH level:
     7 (Neutral)
 
-    Material: Stainless steel'
+    Material: Stainless steel
+
+'
 --- !u!1 &1192727878 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5574277804274332857, guid: 3ee5250bf08d0f34fb6cc0de6506c7fe, type: 3}
@@ -4996,9 +5000,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: 'Pump: Centrifugal Pump'
-  equipmentDescription: 'Flow rate : 10-200 m3/h
+  equipmentDescription: 'Flow rate: 10-200 m3/h
 
-    Pressure : 1-6 bar'
+    Pressure: 1-6 bar'
 --- !u!114 &1504013462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5140,9 +5144,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: Hydrogen Gas tank
-  equipmentDescription: "Product : Hydrogen gas \n- Highly flammable gas\n\nConcentration:
-    99.9% \nOperating Temperature: 25 C\nOperating Pressure : 30 bar\nDensity:  0.0018
-    g/cm3\nMaterial : Low Alloy Steel"
+  equipmentDescription: "Product: Hydrogen gas (Highly flammable gas)\nPurity: 99.9%
+    \nOperating Temperature: 25 C\nOperating Pressure: 30 bar\nDensity:  0.0018 g/cm3\nMaterial:
+    Low Alloy Steel"
 --- !u!1001 &1553169719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5916,6 +5920,9 @@ MonoBehaviour:
   infoPanel: {fileID: 1005795752}
   titleText: {fileID: 765792251}
   descriptionText: {fileID: 739938272}
+  legendPanel: {fileID: 0}
+  legendImage: {fileID: 0}
+  particleLegendSprite: {fileID: 0}
 --- !u!1 &1917222199 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4908275359026174321, guid: 3ee5250bf08d0f34fb6cc0de6506c7fe, type: 3}
@@ -5960,9 +5967,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: 'Pump: Centrifugal Pump'
-  equipmentDescription: 'Flow rate : 10-200 m3/h
+  equipmentDescription: 'Flow rate: 10-200 m3/h
 
-    Pressure : 1-6 bar'
+    Pressure: 1-6 bar'
 --- !u!114 &1930069565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6042,13 +6049,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a6d8c92a2c1846faaa59361599da9db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
-  equipmentName: Compressor
-  equipmentDescription: 'Centrifugal compressor
+  equipmentName: 'Compressor : Centrifugal compressor '
+  equipmentDescription: 'Capacity : 1000-10000 kg/h
 
-    Capacity : 1000-10000 kg/h
-
-    Discharge
-    pressure: 10-50 bar'
+    Discharge pressure: 10-50
+    bar'
 --- !u!65 &1986608078
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6149,24 +6154,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: Brine Storage Tank
-  equipmentDescription: 'Feedstock: Purified NaCl solution
-
-    Concentration: 310
-    g/L
-
-    Function: Feed to electrolyzer (Provides Na+ and Cl- ions)
-
-    Operating
-    Temperature: 75 C
-
-    Operating Pressure: Atmospheric pressure (1.013 bar)
-
-    Density:
-    1.2 g/cm3
-
-    pH level: 10
-
-    Material: Stainless steel'
+  equipmentDescription: "Feedstock: Purified NaCl solution\nConcentration: 310 g/L
+    NaCL\nFunction: Feed to electrolyzer (Provides Na+ and Cl- ions)\nOperating Temperature:
+    75 C\nOperating Pressure: Atmospheric pressure (1.013 bar)\nDensity: 1.2 g/cm3\npH
+    level: 10\nMaterial: Stainless steel\L"
 --- !u!114 &2003917891
 MonoBehaviour:
   m_ObjectHideFlags: 0
