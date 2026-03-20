@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Welcome Scene.unity
+    guid: 904bb860e9540014e845a86a571c73e7
+  - enabled: 1
     path: Assets/Scenes/Industrial View.unity
     guid: d0b8c0a0d41e3364fb98f0815d276498
   - enabled: 1
@@ -14,9 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Industrial View.unity
     guid: d0b8c0a0d41e3364fb98f0815d276498
-  - enabled: 1
-    path: Assets/Scenes/Welcome Scene.unity
-    guid: 904bb860e9540014e845a86a571c73e7
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
