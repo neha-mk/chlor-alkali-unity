@@ -6376,6 +6376,37 @@ MonoBehaviour:
   formulasPanel: {fileID: 0}
   formulasImage: {fileID: 0}
   formulasSprite: {fileID: 0}
+--- !u!1 &1896094952
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1896094953}
+  m_Layer: 0
+  m_Name: CameraPivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1896094953
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896094952}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.24, y: 3.37, z: 39.67}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1917222199 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4908275359026174321, guid: 3ee5250bf08d0f34fb6cc0de6506c7fe, type: 3}
@@ -6763,6 +6794,7 @@ GameObject:
   - component: {fileID: 2083443918}
   - component: {fileID: 2083443921}
   - component: {fileID: 2083443922}
+  - component: {fileID: 2083443923}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -6905,6 +6937,23 @@ MonoBehaviour:
   cellCameraPoint: {fileID: 677876279}
   moveSpeed: 2
   liftHeight: 1.5
+  otherCameraScript: {fileID: 2083443923}
+--- !u!114 &2083443923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083443917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07a690589e17346068123477a571ee2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraIntroOrbit
+  pivot: {fileID: 1896094953}
+  orbitSpeed: 50
+  orbitDuration: 4
+  moveToFinalSpeed: 2
 --- !u!1 &2098298229 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2614793246740244351, guid: 3ee5250bf08d0f34fb6cc0de6506c7fe, type: 3}
@@ -7221,3 +7270,4 @@ SceneRoots:
   - {fileID: 337407422}
   - {fileID: 123154146}
   - {fileID: 1471033185}
+  - {fileID: 1896094953}

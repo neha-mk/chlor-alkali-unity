@@ -13,6 +13,7 @@ public class CellClickController : MonoBehaviour
     public float liftHeight = 8.5f;
 
     bool animationRunning = false;
+    public MonoBehaviour otherCameraScript;
 
     void Update()
     {
@@ -24,6 +25,9 @@ public class CellClickController : MonoBehaviour
         // your existing animation logic here
         // example:
         Debug.Log("Industrial Cell Clicked");
+        // Disable other script
+        if (otherCameraScript != null)
+            otherCameraScript.enabled = false;
 
         StartCoroutine(CellSequence());
     }
