@@ -5622,7 +5622,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.5, y: 308.4}
+  m_AnchoredPosition: {x: -53, y: 308.4}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &206401214
@@ -6036,8 +6036,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 10
-  m_fontSizeBase: 10
+  m_fontSize: 11
+  m_fontSizeBase: 11
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6074,7 +6074,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 25.237183, y: 0, z: 25.112892, w: 8.02779}
+  m_margin: {x: 25.237183, y: 0, z: 52.801888, w: 8.02779}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6104,8 +6104,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 109}
-  m_SizeDelta: {x: 200, y: 120}
+  m_AnchoredPosition: {x: 23, y: 129.4}
+  m_SizeDelta: {x: 300, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &308792899
 GameObject:
@@ -6169,10 +6169,10 @@ RectTransform:
   - {fileID: 1809468479}
   m_Father: {fileID: 1566999322}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 5, y: 0}
-  m_SizeDelta: {x: -20, y: -50}
+  m_SizeDelta: {x: 700, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &330585543
 GameObject:
@@ -6354,18 +6354,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 352926383}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a6d8c92a2c1846faaa59361599da9db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: Membrane
-  equipmentDescription: "Membrane: Perfluorinated Sulfonated Membrane (Nafion)\nSubstrate:
-    Tetrafluoroethylene functionalized with sulfonic acid groups at the anode side
-    and a thinner layer of tetrafluoroethylene functionalized with carboxylic groups
-    facing the cathode side \nSelectivity : Na+ permeability\nActive area: 2.88m2\nThickness:
-    0.2mm\nShelf life : 5 years\nOperation Temperature : 85 C\nAdvantages: Low Ohmic
-    resistance, high sodium ion selectivity"
+  equipmentDescription: 
 --- !u!114 &352926388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6373,7 +6368,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 352926383}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7d67edd371d624251bb634cc952fb35e, type: 3}
   m_Name: 
@@ -6429,11 +6424,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: Anode
-  equipmentDescription: "Anode type:  DSA (Dimensionally Stable Anode)\n\nSubstrate: 
-    Mixture of Ruthenium and Titanium oxides applied on a titanium substrate\n\nShelf
-    life : 8-15 years\L\nCurrent Density: 2-7 kA/m<sup>2</sup>\n\nOperating Temperature:
-    85 <sup>o</sup>C\n\nAnodic current efficiency:  95%\n\nThickness :  2 mm\n\nActive
-    Area :  2.88 m<sup>2</sup>\L\nAdvantages:  Low Overpotential, High Stability"
+  equipmentDescription: "Anode Type: Ti / ( RuO<sub>2</sub> - TiO<sub>2</sub> )\n\nShelf
+    Life: 8-15 years\n\nCurrent Density: 2-7 kA/m<sub>2</sub>\n\nOperating Temperature:
+    85 \xB0C\n\nAnodic Current Efficiency: 95%\n\nThickness: 2 mm\n\nActive Area:
+    2.88 m<sub>2</sub>)\n\nAdvantages: Low Overpotential, High Stability\n\nHalf
+    Chemical Reaction: \n2Cl<sup>-</sup> -> Cl<sub>2</sub> + 2e<sup>-</sup>"
 --- !u!64 &358887702
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -7042,7 +7037,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1627, y: -1052}
+  m_AnchoredPosition: {x: -1627, y: -1010}
   m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &413688474
@@ -7179,7 +7174,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1621, y: -672}
+  m_AnchoredPosition: {x: -1621, y: -617}
   m_SizeDelta: {x: 100, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &424667877
@@ -12734,7 +12729,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1722, y: -912}
+  m_AnchoredPosition: {x: -1722, y: -870}
   m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &621935132
@@ -17856,7 +17851,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6, y: 387}
+  m_AnchoredPosition: {x: -6, y: 367}
   m_SizeDelta: {x: 350, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &673025647
@@ -17960,12 +17955,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: Membrane
-  equipmentDescription: "Membrane: Perfluorinated Sulfonated Membrane (Nafion) \r\nSubstrate:
-    Tetrafluoroethylene functionalized with sulfonic acid groups at the anode side
-    and a thinner layer of tetrafluoroethylene functionalized with carboxylic groups
-    facing the cathode side  \r\nSelectivity : Na+ permeability \r\nActive area:
-    2.88m2 \r\nThickness: 0.2mm \r\nShelf life : 5 years \r\nOperation Temperature
-    : 85 C \r\nAdvantages: Low Ohmic resistance, high sodium ion selectivity"
+  equipmentDescription: "Membrane: Perfluorinated Sulfonated\nMembrane (Nafion)\n\nSelectivity: 
+    Permeability\n\nActive Area: 2.88m<sub>2</sub>\n\nThickness: 0.2mm\n\nShelf Life:
+    5 years\n\nOperation Temperature: 85 \xB0C\n\nAdvantages: Low Ohmic Resistance,
+    High Sodium Ion Selectivity."
 --- !u!64 &752485712
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18077,7 +18070,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1212.4, y: -984}
+  m_AnchoredPosition: {x: -1212.4, y: -942}
   m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &755449141
@@ -23263,7 +23256,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1626, y: -747}
+  m_AnchoredPosition: {x: -1626, y: -705}
   m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &787641952
@@ -33369,7 +33362,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1490.8, y: -672.2999}
+  m_AnchoredPosition: {x: -1490.8, y: -630.2999}
   m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &858504622
@@ -38611,7 +38604,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1720, y: -983}
+  m_AnchoredPosition: {x: -1720, y: -941}
   m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &920277367
@@ -39048,7 +39041,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1476.9, y: -604.2999}
+  m_AnchoredPosition: {x: -1476.9, y: -562.2999}
   m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &983898773
@@ -39353,7 +39346,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 1528, y: 15}
-  m_SizeDelta: {x: 400, y: 720}
+  m_SizeDelta: {x: 300, y: 720}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1026419780
 MonoBehaviour:
@@ -39816,7 +39809,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.9028572, y: 0.9466667}
   m_AnchorMax: {x: 0.9028572, y: 0.9466667}
-  m_AnchoredPosition: {x: 1.2131958, y: -0.7999878}
+  m_AnchoredPosition: {x: -4.199997, y: -8.700012}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1089620037
@@ -39940,14 +39933,14 @@ RectTransform:
   m_GameObject: {fileID: 1092855916}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.88737, y: 0.79782, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1566999322}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 116, y: 0}
+  m_AnchoredPosition: {x: 29.4, y: 0}
   m_SizeDelta: {x: 700, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1092855918
@@ -40240,7 +40233,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1654, y: -397}
+  m_AnchoredPosition: {x: -1654, y: -355}
   m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1163961005
@@ -45633,7 +45626,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1225.7, y: -1051}
+  m_AnchoredPosition: {x: -1225.7, y: -1009}
   m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1285593226
@@ -62213,7 +62206,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1239.8, y: -399.69995}
+  m_AnchoredPosition: {x: -1239.8, y: -357.69995}
   m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1872187752
@@ -62378,11 +62371,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: Cathode
-  equipmentDescription: "Cathode:  Nickel + RuO<sub>2</sub>\nSubstrate :  Nickel
-    base material coated with Ruthenium Oxide\nShelf life :  5-8 years\nCurrent Density: 
-    2-7 kA/m<sup>2</sup>\nOperating Temperature:  85 <sup>O</sup>C\nCathodic current
-    efficiency:  96%\nThickness :  1.5 mm\nActive Area :  2.88 m<sup>2</sup>\nAdvantage
-    :  Supports higher temperature\u2019s, less energy consumption"
+  equipmentDescription: "Cathode Type: Ni / RuO<sub>2</sub>\n\nShelf Life: 5-8 years\n\nCurrent
+    Density: 2-7 kA/m<sub>2</sub>\n\nOperating Temperature: 85 \xB0C\n\nCathodic
+    Current Efficiency: 96%\n\nThickness: 2 mm\n\nActive Area: 2.88 m<sub>2</sub>\n\nAdvantage:
+    Supports Higher Temperatures, Less Energy Consumption.\n\nHalf Chemical Reaction:
+    \n2 H2O + 2e<sup>-</sup> -> H<sub>2</sub> + 2OF <sup>-</sup>\n2Na<sup>+</sup>
+    + 2OH<sup>-</sup> -> NaOH"
 --- !u!64 &1894500774
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -62525,8 +62519,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 34
+  m_fontSizeBase: 34
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -62630,7 +62624,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1720, y: -673}
+  m_AnchoredPosition: {x: -1720, y: -631}
   m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1901944629
@@ -67732,7 +67726,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1732, y: -605}
+  m_AnchoredPosition: {x: -1732, y: -563}
   m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2072998613
@@ -67868,7 +67862,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1326, y: -528}
+  m_AnchoredPosition: {x: -1326, y: -486}
   m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2073701515
@@ -68004,7 +67998,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1326, y: -843}
+  m_AnchoredPosition: {x: -1326, y: -801}
   m_SizeDelta: {x: 1000, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2086166531
@@ -68275,7 +68269,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -23, y: 0}
   m_SizeDelta: {x: 540, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2102447293
@@ -73350,7 +73344,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1212.5, y: -913}
+  m_AnchoredPosition: {x: -1212.5, y: -871}
   m_SizeDelta: {x: 500, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2130111488
