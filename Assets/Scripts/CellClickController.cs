@@ -17,25 +17,15 @@ public class CellClickController : MonoBehaviour
     void Update()
     {
         if (animationRunning) return;
+    }
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hit;
+    public void TriggerCellView()
+    {
+        // your existing animation logic here
+        // example:
+        Debug.Log("Industrial Cell Clicked");
 
-            // if (Physics.Raycast(ray, out hit))
-            int layerMask = ~LayerMask.GetMask("Ions");
-
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
-            {
-                if (hit.transform.root == industrialCell)
-                {
-                    Debug.Log("Industrial Cell Clicked");
-
-                    StartCoroutine(CellSequence());
-                }
-            }
-        }
+        StartCoroutine(CellSequence());
     }
 
     IEnumerator CellSequence()

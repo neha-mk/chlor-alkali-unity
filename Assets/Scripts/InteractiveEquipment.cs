@@ -46,9 +46,13 @@ public class InteractiveEquipment : MonoBehaviour
     {
         Debug.Log("Showing infoPanel cause InteractiveEquipment was clicked");
 
-        UIManager.instance.ShowInfo(
-            data.equipmentName,
-            data.equipmentDescription
-        );
+        if (data.equipmentDescription != "")
+        {
+            UIManager.instance.ShowInfo(
+                data.equipmentName,
+                data.equipmentDescription
+            );
+        }
+
     }
 }

@@ -108,13 +108,13 @@ public class SimulationController : MonoBehaviour
         // DISPLAY MANUAL VALUES
         //----------------------------------
 
-        secCL2Text.text = secCL2Values[index].ToString("F2") + " kWh/kg";
-        secH2Text.text = secH2Values[index].ToString("F2") + " kWh/kg";
-        secNaOHText.text = secNaOHValues[index].ToString("F2") + " kWh/kg";
+        secCL2Text.text = secCL2Values[index].ToString("F2") ;
+        secH2Text.text = secH2Values[index].ToString("F2") ;
+        secNaOHText.text = secNaOHValues[index].ToString("F2") ;
 
-        mCL2Text.text = mCL2Values[index].ToString("F2") + " kg/h";
-        mH2Text.text = mH2Values[index].ToString("F2") + " kg/h";
-        mNaOHText.text = mNaOHValues[index].ToString("F2") + " kg/h";
+        mCL2Text.text = mCL2Values[index].ToString("F2");
+        mH2Text.text = mH2Values[index].ToString("F2");
+        mNaOHText.text = mNaOHValues[index].ToString("F2");
     }
 
     //----------------------------------
