@@ -343,7 +343,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1677, y: 930}
+  m_AnchoredPosition: {x: 1598, y: 930}
   m_SizeDelta: {x: 240, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &30984659
@@ -479,7 +479,7 @@ GameObject:
   - component: {fileID: 70517730}
   - component: {fileID: 70517729}
   m_Layer: 5
-  m_Name: ToCellViewButton
+  m_Name: ToMainViewButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -502,8 +502,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1420, y: 930}
-  m_SizeDelta: {x: 250, y: 80}
+  m_AnchoredPosition: {x: 880, y: 930}
+  m_SizeDelta: {x: 300, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &70517729
 MonoBehaviour:
@@ -551,7 +551,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2083443922}
         m_TargetAssemblyTypeName: CellClickController, Assembly-CSharp
-        m_MethodName: TriggerCellView
+        m_MethodName: GoToMainMenu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2143,10 +2143,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: Electrolyzer Stack
-  equipmentDescription: "Number of cells: 38\nCurrent: 2.5 \u2013 7.0  kA/m2\nVoltage:
-    129.58 V\nConnection: Bipolar stack\LConnection type: Series connection (Stacking
-    cells in series, current remains same in all cells, but the voltage adds up.
-    Less Heat loss.)"
+  equipmentDescription: "Number of Cells: 38\n\nCurrent: 2.5 \u2013 7.0 kA/m<sub>2</sub>\n\nVoltage:
+    129.58 V\n\nConnection: Bipolar Stack\n\nConnection Type: Series Connection \n\nStacking
+    cells in series, current remains the same in all cells, but the voltage adds
+    up. Less heat loss."
 --- !u!114 &487230158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2623,13 +2623,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 677876278}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.04853458, y: -0, z: -0, w: 0.99882156}
   m_LocalPosition: {x: -5.06, y: 4.36, z: 55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 5.564, y: 0, z: 0}
 --- !u!1 &696332334
 GameObject:
   m_ObjectHideFlags: 0
@@ -2817,8 +2817,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Sample Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 42df1c7856584b6b8db9a509b6b10074, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3089,8 +3089,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Sample Title
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3863,6 +3863,142 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 7.891224, y: 0.26724982, z: 0.26724946}
   m_Center: {x: 19.457031, y: 3.334042, z: 0.33619234}
+--- !u!1 &1026585312
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1026585313}
+  - component: {fileID: 1026585315}
+  - component: {fileID: 1026585314}
+  m_Layer: 5
+  m_Name: Text (TMP)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1026585313
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026585312}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2078705207}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1026585314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026585312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Cell View
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294638335
+  m_fontColor: {r: 1, g: 0.9803922, b: 0.9803922, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: 97690656
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 38
+  m_fontSizeBase: 38
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1026585315
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026585312}
+  m_CullTransparentMesh: 1
 --- !u!1 &1033055131 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2335221783801353397, guid: 3ee5250bf08d0f34fb6cc0de6506c7fe, type: 3}
@@ -4236,11 +4372,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: Chlorine Gas tank
-  equipmentDescription: "Product: Chlorine gas (Two phased \u2013 Liquid at the bottom
-    and gas at the top) At high pressure chlorine gas coverts to liquid phase. Reduces
-    storage volume.\nPurity: 99.9% \nOperating Temperature: 40 C\nOperating Pressure:
-    10 bar\nDensity:  0.0035 g/cm3 (Gas Phase), 1.47 g/cm3 (Liquid phase)\nMaterial:
-    Carbon steel"
+  equipmentDescription: "Product: Chlorine Gas \n\nTwo phases: Liquid at the bottom
+    and gas at the top. At high \npressure, chlorine gas converts to liquid phase.
+    Reduces storage volume.\n\nPurity: 99.9% \n\nOperating Temperature: 30 \xB0C\n\nOperating
+    Pressure: 10 bar\n\nDensity: 0.0035 g/cm<sub>3</sub> (Gas Phase), 1.47 g/cm<sub>3</sub>
+    (Liquid Phase)\n\nMaterial: Carbon Steel"
 --- !u!1 &1187409952 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4273239327366897131, guid: 0a0eb5fc353629b4dacbc5e40d303e19, type: 3}
@@ -4294,26 +4430,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: Water Storage Tank
-  equipmentDescription: 'Feedstock: Deionized Water
-
-    Concentration: 100% pure
-    water
-
-    Function: Feed to electrolyzer
-
-    Operating Temperature: 30 C
-
-    Operating
-    Pressure: Atmospheric pressure (1.013 bar)
-
-    Density: 1.0 g/cm3
-
-    pH level:
-    7 (Neutral)
-
-    Material: Stainless steel
-
-'
+  equipmentDescription: "Feedstock: Deionized Water\n\nConcentration: 100% Pure Water\n\nFunction:
+    Feed to Electrolyzer\n\nOperating Temperature: 30 \xB0C\n\nOperating Pressure:
+    1.013 bar\n\nDensity: 1.0 g/cm<sub>3</sub>\n\npH level: 14 (Highly Alkaline)\n\nMaterial:
+    Stainless Steel"
 --- !u!1 &1192727878 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5574277804274332857, guid: 3ee5250bf08d0f34fb6cc0de6506c7fe, type: 3}
@@ -5589,9 +5709,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: Hydrogen Gas tank
-  equipmentDescription: "Product: Hydrogen gas (Highly flammable gas)\nPurity: 99.9%
-    \nOperating Temperature: 25 C\nOperating Pressure: 30 bar\nDensity:  0.0018 g/cm3\nMaterial:
-    Low Alloy Steel"
+  equipmentDescription: "Product: Hydrogen Gas (Highly Flammable Gas)\n\nPurity:
+    99.9% \n\nOperating Temperature: 25 \xB0C\n\nOperating Pressure: 30 bar\n\nDensity:
+    0.0018 g/cm<sub>3</sub>\n\nMaterial: Low Alloy Steel"
 --- !u!1001 &1553169719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5932,21 +6052,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: Caustic Storage tank
-  equipmentDescription: 'Product: Liquid Caustic soda
-
-    Concentration: 33% NaOH
-
-    Operating
-    Temperature: 40 C
-
-    Operating Pressure: Atmospheric pressure (1.013 bar)
-
-    Density:
-    1.34 g/cm3
-
-    pH level: 14 (Strong Alkaline)
-
-    Material: Stainless steel'
+  equipmentDescription: "Product: Liquid Caustic Soda\n\nConcentration: 33% NaOH
+    solution\n\nOperating Temperature: 30 \xB0C\n\nOperating Pressure: 1.013 bar\n\nDensity:
+    1.34 g/cm<sub>3</sub>\n\npH level: 14 (Strong Alkaline)\n\nMaterial: Stainless
+    Steel"
 --- !u!114 &1692764267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6097,8 +6206,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Guide sample text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6345,6 +6454,7 @@ RectTransform:
   - {fileID: 696332335}
   - {fileID: 30984658}
   - {fileID: 70517728}
+  - {fileID: 2078705207}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -6633,10 +6743,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: Brine Storage Tank
-  equipmentDescription: "Feedstock: Purified NaCl solution\nConcentration: 310 g/L
-    NaCL\nFunction: Feed to electrolyzer (Provides Na+ and Cl- ions)\nOperating Temperature:
-    75 C\nOperating Pressure: Atmospheric pressure (1.013 bar)\nDensity: 1.2 g/cm3\npH
-    level: 10\nMaterial: Stainless steel\L"
+  equipmentDescription: "Feedstock: Purified NaCl Solution\n\nConcentration: 310
+    g NaCl / L solution\n\nFunction: Feed to Electrolyzer (Provides  and  ions)\n\nOperating
+    Temperature: 75 \xB0C\n\nOperating Pressure: 1.013 bar\n\nDensity: 1.2 g/cm<sub>3</sub>\n\npH
+    level: 4 (Acidic)\n\nMaterial: Stainless Steel"
 --- !u!114 &2003917891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6781,6 +6891,139 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.1644001, y: 2.615405, z: 4.6751356}
   m_Center: {x: 22.673916, y: 2.4165606, z: 2.6569}
+--- !u!1 &2078705206
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2078705207}
+  - component: {fileID: 2078705210}
+  - component: {fileID: 2078705209}
+  - component: {fileID: 2078705208}
+  m_Layer: 5
+  m_Name: ToCellViewButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2078705207
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078705206}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1026585313}
+  m_Father: {fileID: 1845154662}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1267, y: 930}
+  m_SizeDelta: {x: 250, y: 80}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2078705208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078705206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Button
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.98490566, g: 0.05760764, b: 0.05760764, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 2078705209}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2083443922}
+        m_TargetAssemblyTypeName: CellClickController, Assembly-CSharp
+        m_MethodName: TriggerCellView
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2078705209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078705206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.90188676, g: 0.32501957, b: 0.32501957, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &2078705210
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078705206}
+  m_CullTransparentMesh: 1
 --- !u!1 &2083443917
 GameObject:
   m_ObjectHideFlags: 0
@@ -6951,8 +7194,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraIntroOrbit
   pivot: {fileID: 1896094953}
-  orbitSpeed: 50
-  orbitDuration: 4
+  orbitSpeed: 100
+  orbitDuration: 1
   moveToFinalSpeed: 2
 --- !u!1 &2098298229 stripped
 GameObject:
@@ -7168,7 +7411,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Cell View
+  m_text: Main Menu
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

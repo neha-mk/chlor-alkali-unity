@@ -31,6 +31,11 @@ public class CellClickController : MonoBehaviour
 
         StartCoroutine(CellSequence());
     }
+    public void GoToMainMenu()
+    {
+        Debug.Log("go to Welcome Scene");
+        SceneManager.LoadScene("Welcome Scene");
+    }
 
     IEnumerator CellSequence()
     {
