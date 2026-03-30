@@ -27,6 +27,6 @@ public class TooltipManager : MonoBehaviour
 
     void Update()
     {
-        tooltipPanel.transform.position = Input.mousePosition + new Vector3(60, 220, 0);
+        tooltipPanel.transform.position = Input.mousePosition + new Vector3(45, 105, 0);
     }
 }
