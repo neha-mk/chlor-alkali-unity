@@ -2852,7 +2852,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 12
   m_wordSpacing: 0
   m_lineSpacing: 1
   m_lineSpacingMax: 0
@@ -3124,7 +3124,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 8
   m_wordSpacing: 0
   m_lineSpacing: 1.2
   m_lineSpacingMax: 0
@@ -4373,7 +4373,7 @@ MonoBehaviour:
   equipmentName: Chlorine Gas tank
   equipmentDescription: "Product: Chlorine Gas \n\nTwo phases: Liquid at the bottom
     and gas at the top. At high \npressure, chlorine gas converts to liquid phase.
-    Reduces storage volume.\n\nPurity: 99.9% \n\nOperating Temperature: 30 \xB0C\n\nOperating
+    Reduces storage volume.\n\nPurity: 99.9% \n\nOperating Temperature: 30<sup>O</sup>C\n\nOperating
     Pressure: 10 bar\n\nDensity: 0.0035 g/cm<sup>3</sup> (Gas Phase), 1.47 g/cm<sup>3</sup>
     (Liquid Phase)\n\nMaterial: Carbon Steel"
 --- !u!1 &1187409952 stripped
@@ -4429,10 +4429,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: Water Storage Tank
-  equipmentDescription: "Feedstock: Deionized Water\n\nConcentration: 100% Pure Water\n\nFunction:
-    Feed to Electrolyzer\n\nOperating Temperature: 30 \xB0C\n\nOperating Pressure:
-    1.013 bar\n\nDensity: 1.0 g/cm<sup>3</sup>\n\npH level: 14 (Highly Alkaline)\n\nMaterial:
-    Stainless Steel"
+  equipmentDescription: 'Feedstock: Deionized Water
+
+
+    Concentration: 100% Pure
+    Water
+
+
+    Function: Feed to Electrolyzer
+
+
+    Operating Temperature: 30 <sup>O</sup>C
+
+
+    Operating
+    Pressure: 1.013 bar
+
+
+    Density: 1.0 g/cm<sup>3</sup>
+
+
+    pH level: 14 (Highly
+    Alkaline)
+
+
+    Material: Stainless Steel'
 --- !u!1 &1192727878 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5574277804274332857, guid: 3ee5250bf08d0f34fb6cc0de6506c7fe, type: 3}
@@ -5709,7 +5730,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: Hydrogen Gas tank
   equipmentDescription: "Product: Hydrogen Gas (Highly Flammable Gas)\n\nPurity:
-    99.9% \n\nOperating Temperature: 25 \xB0C\n\nOperating Pressure: 30 bar\n\nDensity:
+    99.9% \n\nOperating Temperature: 25 <sup>O</sup>C\n\nOperating Pressure: 30 bar\n\nDensity:
     0.0018 g/cm<sup>3</sup>\n\nMaterial: Low Alloy Steel"
 --- !u!1001 &1553169719
 PrefabInstance:
@@ -6051,10 +6072,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: Caustic Storage tank
-  equipmentDescription: "Product: Liquid Caustic Soda\n\nConcentration: 33% NaOH
-    solution\n\nOperating Temperature: 30 \xB0C\n\nOperating Pressure: 1.013 bar\n\nDensity:
-    1.34 g/cm<sup>3</sup>\n\npH level: 14 (Strong Alkaline)\n\nMaterial: Stainless
-    Steel"
+  equipmentDescription: 'Product: Liquid Caustic Soda
+
+
+    Concentration: 33% NaOH
+    solution
+
+
+    Operating Temperature: 30 <sup>O</sup>C
+
+
+    Operating Pressure:
+    1.013 bar
+
+
+    Density: 1.34 g/cm<sup>3</sup>
+
+
+    pH level: 14 (Strong Alkaline)
+
+
+    Material:
+    Stainless Steel'
 --- !u!114 &1692764267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6742,10 +6781,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: Brine Storage Tank
-  equipmentDescription: "Feedstock: Purified NaCl Solution\n\nConcentration: 310
-    g NaCl / L solution\n\nFunction: Feed to Electrolyzer (Provides  and  ions)\n\nOperating
-    Temperature: 75 \xB0C\n\nOperating Pressure: 1.013 bar\n\nDensity: 1.2 g/cm<sup>3</sup>\n\npH
-    level: 4 (Acidic)\n\nMaterial: Stainless Steel"
+  equipmentDescription: 'Feedstock: Purified NaCl Solution
+
+
+    Concentration: 310
+    g NaCl / L solution
+
+
+    Function: Feed to Electrolyzer (Provides  and  ions)
+
+
+    Operating
+    Temperature: 75 <sup>O</sup>C
+
+
+    Operating Pressure: 1.013 bar
+
+
+    Density:
+    1.2 g/cm<sup>3</sup>
+
+
+    pH level: 4 (Acidic)
+
+
+    Material: Stainless Steel'
 --- !u!114 &2003917891
 MonoBehaviour:
   m_ObjectHideFlags: 0
