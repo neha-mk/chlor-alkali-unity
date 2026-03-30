@@ -2647,7 +2647,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &696332335
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3417,8 +3417,7 @@ MonoBehaviour:
   - Welcome to the Chlor-Alkali Electrolysis Plant.
   - Move around and hover over the equipments. You can click on the equipments to
     view detailed information about them.
-  - Click on the 'Cell View' button to explore how chlor-alkali process
-    works.
+  - Click on the 'Cell View' button to explore how chlor-alkali process works.
 --- !u!1 &824415770 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3ee5250bf08d0f34fb6cc0de6506c7fe, type: 3}
