@@ -5414,9 +5414,13 @@ MonoBehaviour:
   guidePanel: {fileID: 158611405}
   steps:
   - Welcome inside the Electrolysis Cell.
-  - This cell contains an anode and cathode separated by a membrane.
-  - Watch how sodium chloride solution is converted into chlorine, hydrogen, and
-    sodium hydroxide.
+  - This cell contains an anode and cathode separated by a membrane. Click on them
+    to learn more about them.
+  - Watch how Sodium Chloride solution is converted into Chlorine, Hydrogen, and
+    Sodium Hydroxide.
+  - Change the current density using the slider on top and see how it affects the
+    chlor alkali process.
+  - You can hover on the pipes and other components to see what they represent.
 --- !u!114 &158611408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17854,7 +17858,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 82, y: -254}
+  m_AnchoredPosition: {x: 82, y: -250}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &672867864
@@ -17886,8 +17890,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -62760,8 +62764,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 38
-  m_fontSizeBase: 38
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -62770,7 +62774,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 4
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
