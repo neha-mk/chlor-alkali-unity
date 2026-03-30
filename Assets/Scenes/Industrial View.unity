@@ -3417,7 +3417,7 @@ MonoBehaviour:
   - Welcome to the Chlor-Alkali Electrolysis Plant.
   - Move around and hover over the equipments. You can click on the equipments to
     view detailed information about them.
-  - You can also click on the 'Industrial Cell' to explore how chlor-alkali process
+  - Click on the 'Cell View' button to explore how chlor-alkali process
     works.
 --- !u!1 &824415770 stripped
 GameObject:
