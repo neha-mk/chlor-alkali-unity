@@ -30,7 +30,11 @@ public class SimulationController : MonoBehaviour
     public ParticleSystem gasPS1;
     public ParticleSystem gasPS2;
 
-    float baseIonSpeed = 0.4f;
+    // 🔥 Base values (from Inspector)
+    float[] baseSpeeds = new float[6];
+    float[] baseEmissionRates = new float[6];
+    float[] baseGasEmissionRates = new float[2];
+
     float baseElectronSpeed = 1f;
     float baseSpawnRate = 0.09f;
 
@@ -42,7 +46,7 @@ public class SimulationController : MonoBehaviour
 
     public float[] secCL2Values = { 0, 0, 0, 0 };
     public float[] secH2Values = { 0, 0, 0, 0 };
-    public float[] secNaOHValues= { 0, 0, 0, 0 };
+    public float[] secNaOHValues = { 0, 0, 0, 0 };
 
     public float[] mCL2Values = { 0, 0, 0, 0 };
     public float[] mH2Values = { 0, 0, 0, 0 };
@@ -57,8 +61,40 @@ public class SimulationController : MonoBehaviour
         currentSlider.wholeNumbers = true;
 
         currentSlider.value = 0;
-
         currentSlider.onValueChanged.AddListener(UpdateSimulation);
+
+        //----------------------------------
+        // 🔥 STORE ION BASE VALUES
+        //----------------------------------
+
+        ParticleSystem[] ionSystems = { ps1, ps2, ps3, ps4, ps5, ps6 };
+
+        for (int i = 0; i < ionSystems.Length; i++)
+        {
+            if (ionSystems[i] == null) continue;
+
+            var main = ionSystems[i].main;
+            var emission = ionSystems[i].emission;
+
+            baseSpeeds[i] = main.startSpeed.constant;
+            baseEmissionRates[i] = emission.rateOverTime.constant;
+        }
+
+        //----------------------------------
+        // 🔥 STORE GAS BASE VALUES
+        //----------------------------------
+
+        ParticleSystem[] gasSystems = { gasPS1, gasPS2 };
+
+        for (int i = 0; i < gasSystems.Length; i++)
+        {
+            if (gasSystems[i] == null) continue;
+
+            var emission = gasSystems[i].emission;
+            baseGasEmissionRates[i] = emission.rateOverTime.constant;
+        }
+
+        //----------------------------------
 
         UpdateSimulation(currentSlider.value);
     }
@@ -67,17 +103,14 @@ public class SimulationController : MonoBehaviour
 
     public void UpdateSimulation(float sliderValue)
     {
-        Debug.Log("Slider moved: " + sliderValue);
-
         int index = (int)sliderValue;
 
         float currentDensity = currentDensityValues[index];
 
         currentValueText.text = currentDensity.ToString("0") + " A/m²";
 
-        int particleCount = GetParticleCount(currentDensity);
-
-        float factor = currentDensity / 2500f;
+        // ✅ Smooth scaling (prevents extreme jumps)
+        float factor = Mathf.Sqrt(currentDensity / 2500f);
 
         //----------------------------------
         // ELECTRONS
@@ -90,27 +123,27 @@ public class SimulationController : MonoBehaviour
         // ION PARTICLES
         //----------------------------------
 
-        UpdateIonParticles(ps1, factor, particleCount);
-        UpdateIonParticles(ps2, factor, particleCount);
-        UpdateIonParticles(ps3, factor, particleCount);
-        UpdateIonParticles(ps4, factor, particleCount);
-        UpdateIonParticles(ps5, factor, particleCount);
-        UpdateIonParticles(ps6, factor, particleCount);
+        UpdateIonParticles(ps1, 0, factor);
+        UpdateIonParticles(ps2, 1, factor);
+        UpdateIonParticles(ps3, 2, factor);
+        UpdateIonParticles(ps4, 3, factor);
+        UpdateIonParticles(ps5, 4, factor);
+        UpdateIonParticles(ps6, 5, factor);
 
         //----------------------------------
         // GAS PARTICLES
         //----------------------------------
 
-        UpdateGasParticles(gasPS1, particleCount);
-        UpdateGasParticles(gasPS2, particleCount);
+        UpdateGasParticles(gasPS1, 0, factor);
+        UpdateGasParticles(gasPS2, 1, factor);
 
         //----------------------------------
         // DISPLAY MANUAL VALUES
         //----------------------------------
 
-        secCL2Text.text = secCL2Values[index].ToString("F2") ;
-        secH2Text.text = secH2Values[index].ToString("F2") ;
-        secNaOHText.text = secNaOHValues[index].ToString("F2") ;
+        secCL2Text.text = secCL2Values[index].ToString("F2");
+        secH2Text.text = secH2Values[index].ToString("F2");
+        secNaOHText.text = secNaOHValues[index].ToString("F2");
 
         mCL2Text.text = mCL2Values[index].ToString("F2");
         mH2Text.text = mH2Values[index].ToString("F2");
@@ -118,39 +151,38 @@ public class SimulationController : MonoBehaviour
     }
 
     //----------------------------------
-    // PARTICLE COUNT
-    //----------------------------------
-
-    int GetParticleCount(float current)
-    {
-        float ratio = (current - 2500f) / (7000f - 2500f);
-        return Mathf.RoundToInt(10 + ratio * 20);
-    }
-
-    //----------------------------------
     // UPDATE IONS
     //----------------------------------
 
-    void UpdateIonParticles(ParticleSystem ps, float factor, int particleCount)
+    void UpdateIonParticles(ParticleSystem ps, int index, float factor)
     {
         if (ps == null) return;
 
         var main = ps.main;
-        main.startSpeed = baseIonSpeed * factor;
-
         var emission = ps.emission;
-        emission.rateOverTime = particleCount;
+
+        // ✅ Always scale from ORIGINAL inspector values
+        main.startSpeed = baseSpeeds[index] * factor;
+
+        emission.rateOverTime = Mathf.Min(baseEmissionRates[index] * factor, 50f);
+
+        // Optional: force reset to avoid leftover particles
+        
     }
 
     //----------------------------------
     // UPDATE GAS
     //----------------------------------
 
-    void UpdateGasParticles(ParticleSystem ps, int particleCount)
+    void UpdateGasParticles(ParticleSystem ps, int index, float factor)
     {
         if (ps == null) return;
 
         var emission = ps.emission;
-        emission.rateOverTime = particleCount;
+
+        emission.rateOverTime = Mathf.Min(baseGasEmissionRates[index] * factor, 50f);
+
+        // Optional reset
+        
     }
 }
