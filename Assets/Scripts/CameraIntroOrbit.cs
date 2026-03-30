@@ -13,14 +13,38 @@ public class CameraIntroOrbit : MonoBehaviour
     private float timer = 0f;
     private bool orbiting = true;
 
+    void StartIntro()
+    {
+        orbiting = true;
+
+        transform.position = pivot.position + new Vector3(0, 2, -10);
+        transform.LookAt(pivot);
+
+    }
+
+    void SkipIntro()
+    {
+        orbiting = false;
+
+        // Stay at final position
+        transform.position = finalPosition;
+        transform.rotation = finalRotation;
+
+    }
+
     void Start()
     {
         finalPosition = transform.position;
         finalRotation = transform.rotation;
-
-        // Move camera back a bit to start orbit
-        transform.position = pivot.position + new Vector3(0, 2, -10);
-        transform.LookAt(pivot);
+        // Only play intro if coming from Scene1
+        if (SceneTracker.previousScene == "Welcome Scene")
+        {
+            StartIntro();
+        }
+        else
+        {
+            SkipIntro();
+        }
     }
 
     void Update()

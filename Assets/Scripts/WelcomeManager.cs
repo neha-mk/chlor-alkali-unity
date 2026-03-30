@@ -12,6 +12,7 @@ public class WelcomeManager : MonoBehaviour
 
     public void StartProcess()
     {
+        SceneTracker.previousScene = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene("Industrial View");
     }
 
