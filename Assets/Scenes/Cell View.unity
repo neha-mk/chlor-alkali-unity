@@ -6268,7 +6268,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.0017412085, y: 0.99994755, z: -0.010090823, w: 0.000119369986}
-  m_LocalPosition: {x: -5, y: -0.28, z: 43.01}
+  m_LocalPosition: {x: -4.9, y: -0.28, z: 43.01}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6432,9 +6432,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: Anode
   equipmentDescription: "Anode Type: Ti / ( RuO<sub>2</sub> - TiO<sub>2</sub> )\n\nShelf
-    Life: 8-15 years\n\nCurrent Density: 2-7 kA/m<sub>2</sub>\n\nOperating Temperature:
-    85 \xB0C\n\nAnodic Current Efficiency: 95%\n\nThickness: 2 mm\n\nActive Area:
-    2.88 m<sub>2</sub>)\n\nAdvantages: Low Overpotential, High Stability\n\nHalf
+    Life: 8-15 years\n\nCurrent Density: 2-7 kA/m<sup>2</sup>\n\nOperating Temperature:
+    85 <sup>O</sup>C\n\nAnodic Current Efficiency: 95%\n\nThickness: 2 mm\n\nActive
+    Area: 2.88 m<sup>2</sup>)\n\nAdvantages: Low Overpotential, High Stability\n\nHalf
     Chemical Reaction: \n2Cl<sup>-</sup> -> Cl<sub>2</sub> + 2e<sup>-</sup>"
 --- !u!64 &358887702
 MeshCollider:
@@ -6974,13 +6974,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410087039}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalRotation: {x: 0.6830127, y: -0.18301266, z: 0.18301266, w: 0.6830127}
+  m_LocalPosition: {x: -4, y: -0.8, z: 4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: -30, z: 0}
 --- !u!114 &410087042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7578,7 +7578,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -5992446993281013939, guid: 89e7f4cbf586eff43963c7cb3413641f, type: 3}
+  - {fileID: 2100000, guid: 71c8ae80ecadb4dd886e3577d6a01b1a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -17858,7 +17858,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 90, y: -250}
+  m_AnchoredPosition: {x: 98.8, y: -250}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &672867864
@@ -17890,8 +17890,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278192686
-  m_fontColor: {r: 0.1792453, g: 0.040388193, b: 0, a: 1}
+    rgba: 4009754624
+  m_fontColor: {r: 0, g: 0, b: 0, a: 0.9372549}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -18098,10 +18098,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: Membrane
-  equipmentDescription: "Membrane: Perfluorinated Sulfonated\nMembrane (Nafion)\n\nSelectivity: 
-    Permeability\n\nActive Area: 2.88m<sub>2</sub>\n\nThickness: 0.2mm\n\nShelf Life:
-    5 years\n\nOperation Temperature: 85 \xB0C\n\nAdvantages: Low Ohmic Resistance,
-    High Sodium Ion Selectivity."
+  equipmentDescription: 'Membrane: Perfluorinated Sulfonated
+
+    Membrane (Nafion)
+
+
+    Selectivity: 
+    Permeability
+
+
+    Active Area: 2.88m<sup>2</sup>
+
+
+    Thickness: 0.2mm
+
+
+    Shelf
+    Life: 5 years
+
+
+    Operation Temperature: 85 <sup>O</sup>C
+
+
+    Advantages:
+    Low Ohmic Resistance, High Sodium Ion Selectivity.'
 --- !u!64 &752485712
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -40208,7 +40228,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -5992446993281013939, guid: 89e7f4cbf586eff43963c7cb3413641f, type: 3}
+  - {fileID: 2100000, guid: 71c8ae80ecadb4dd886e3577d6a01b1a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -62617,8 +62637,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: Cathode
   equipmentDescription: "Cathode Type: Ni / RuO<sub>2</sub>\n\nShelf Life: 5-8 years\n\nCurrent
-    Density: 2-7 kA/m<sub>2</sub>\n\nOperating Temperature: 85 \xB0C\n\nCathodic
-    Current Efficiency: 96%\n\nThickness: 2 mm\n\nActive Area: 2.88 m<sub>2</sub>\n\nAdvantage:
+    Density: 2-7 kA/m<sup>2</sup>\n\nOperating Temperature: 85 <sup>O</sup>C\n\nCathodic
+    Current Efficiency: 96%\n\nThickness: 2 mm\n\nActive Area: 2.88 m<sup>2</sup>\n\nAdvantage:
     Supports Higher Temperatures, Less Energy Consumption.\n\nHalf Chemical Reaction:
     \n2 H2O + 2e<sup>-</sup> -> H<sub>2</sub> + 2OF <sup>-</sup>\n2Na<sup>+</sup>
     + 2OH<sup>-</sup> -> NaOH"
