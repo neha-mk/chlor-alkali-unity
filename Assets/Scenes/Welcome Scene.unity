@@ -909,7 +909,7 @@ MonoBehaviour:
 
     This simulation
     visually represents these phenomena using animated particles to depict ion movement,
-    gas evolution, and electron flow. Users can adjust the current density**, which
+    gas evolution, and electron flow. Users can adjust the current density, which
     directly influences the rate of reactions. As the current increases, the speed
     of electron flow and ion movement increases, along with the production rates
     of chlorine, hydrogen, and sodium hydroxide. This helps users understand the
@@ -917,8 +917,8 @@ MonoBehaviour:
 
 
     Additionally,
-    the simulation provides key output parameters such as **Specific Energy Consumption
-    (SEC)** and production rates of the products. These values help illustrate the
+    the simulation provides key output parameters such as Specific Energy Consumption
+    (SEC) and production rates of the products. These values help illustrate the
     efficiency and performance of the process under different operating conditions.
 
 
