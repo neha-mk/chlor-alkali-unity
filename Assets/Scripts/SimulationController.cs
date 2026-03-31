@@ -53,7 +53,7 @@ public class SimulationController : MonoBehaviour
     public float[] mH2Values = { 0, 0, 0, 0 };
     public float[] mNaOHValues = { 0, 0, 0, 0 };
 
-    public float[] soundPitchValues = { 0.25f, 0.45f, 0.65f, 0.85f };
+    public float[] soundPitchValues = { 0.2f, 0.45f, 0.65f, 0.85f };
     //----------------------------------
 
     void Start()
