@@ -5526,8 +5526,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Sample Title
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 151e68562fb084227b3886ba83f2d513, type: 2}
+  m_sharedMaterial: {fileID: -8075190037553908430, guid: 151e68562fb084227b3886ba83f2d513, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5551,8 +5551,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 25
+  m_fontSizeBase: 25
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5561,7 +5561,7 @@ MonoBehaviour:
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 4
+  m_characterSpacing: 10
   m_wordSpacing: 0
   m_lineSpacing: 1
   m_lineSpacingMax: 0
@@ -5882,8 +5882,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Sample Text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dcfd87f6f848c4610acf796d4a731f50, type: 2}
+  m_sharedMaterial: {fileID: 8265558692111867312, guid: dcfd87f6f848c4610acf796d4a731f50, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -5917,9 +5917,9 @@ MonoBehaviour:
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 12
+  m_characterSpacing: 5
   m_wordSpacing: 0
-  m_lineSpacing: 1
+  m_lineSpacing: 20
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -6314,10 +6314,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: Anode
-  equipmentDescription: "Anode Type: Ti / ( RuO<sub>2</sub> - TiO<sub>2</sub> )\n\nShelf
-    Life: 8-15 years\n\nCurrent Density: 2-7 kA/m<sup>2</sup>\n\nOperating Temperature:
-    85 <sup>O</sup>C\n\nAnodic Current Efficiency: 95%\n\nThickness: 2 mm\n\nActive
-    Area: 2.88 m<sup>2</sup>)\n\nAdvantages: Low Overpotential, High Stability\n\nHalf
+  equipmentDescription: "Anode Type: Ti / ( RuO<sub>2</sub> - TiO<sub>2</sub> )\nShelf
+    Life: 8-15 years\nCurrent Density: 2-7 kA/m<sup>2</sup>\nOperating Temperature:
+    85 <sup>O</sup>C\nAnodic Current Efficiency: 95%\nThickness: 2 mm\nActive Area:
+    2.88 m<sup>2</sup>)\nAdvantages: \n- Low Overpotential\n- High Stability\nHalf
     Chemical Reaction: \n2Cl<sup>-</sup> -> Cl<sub>2</sub> + 2e<sup>-</sup>"
 --- !u!64 &358887702
 MeshCollider:
@@ -17979,10 +17979,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: Membrane
-  equipmentDescription: "Membrane: Perfluorinated Sulfonated\nMembrane (Nafion)\n\nSelectivity: 
-    Permeability\n\nActive Area: 2.88m<sup>2</sup>\n\nThickness: 0.2mm\n\nShelf Life:
-    5 years\n\nOperation Temperature: 85 <sup>O</sup>C\n\nAdvantages: \n- Low Ohmic
-    Resistance\n- High Sodium Ion Selectivity."
+  equipmentDescription: "Membrane: Perfluorinated Sulfonated\nMembrane (Nafion)\nSelectivity: 
+    Permeability\nActive Area: 2.88m<sup>2</sup>\nThickness: 0.2mm\nShelf Life: 5
+    years\nOperation Temperature: 85 <sup>O</sup>C\nAdvantages: \n- Low Ohmic Resistance\n-
+    High Sodium Ion Selectivity."
 --- !u!64 &752485712
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -38846,7 +38846,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1528, y: 15}
+  m_AnchoredPosition: {x: 1528, y: 83}
   m_SizeDelta: {x: 300, y: 720}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1026419780
@@ -50633,8 +50633,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278242559
-  m_fontColor: {r: 1, g: 0.8, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -61401,10 +61401,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: Cathode
-  equipmentDescription: "Cathode Type: Ni / RuO<sub>2</sub>\n\nShelf Life: 5-8 years\n\nCurrent
-    Density: 2-7 kA/m<sup>2</sup>\n\nOperating Temperature: 85 <sup>O</sup>C\n\nCathodic
-    Current Efficiency: 96%\n\nThickness: 2 mm\n\nActive Area: 2.88 m<sup>2</sup>\n\nAdvantage:
-    Supports Higher Temperatures, Less Energy Consumption.\n\nHalf Chemical Reaction:
+  equipmentDescription: "Cathode Type: Ni / RuO<sub>2</sub>\nShelf Life: 5-8 years\nCurrent
+    Density: 2-7 kA/m<sup>2</sup>\nOperating Temperature: 85 <sup>O</sup>C\nCathodic
+    Current Efficiency: 96%\nThickness: 2 mm\nActive Area: 2.88 m<sup>2</sup>\nAdvantage:
+    \n- Supports Higher Temperatures\n- Less Energy Consumption.\nHalf Chemical Reaction:
     \n2 H2O + 2e<sup>-</sup> -> H<sub>2</sub> + 2OH <sup>-</sup>\n2Na<sup>+</sup>
     + 2OH<sup>-</sup> -> NaOH"
 --- !u!64 &1894500774
