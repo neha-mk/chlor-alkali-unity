@@ -343,8 +343,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1598, y: 930}
-  m_SizeDelta: {x: 240, y: 80}
+  m_AnchoredPosition: {x: 1623, y: 937}
+  m_SizeDelta: {x: 200, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &30984659
 MonoBehaviour:
@@ -390,8 +390,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1471033184}
-        m_TargetAssemblyTypeName: ExitAppHandler, Assembly-CSharp
+      - m_Target: {fileID: 2083443922}
+        m_TargetAssemblyTypeName: CellClickController, Assembly-CSharp
         m_MethodName: ExitApplication
         m_Mode: 1
         m_Arguments:
@@ -415,7 +415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.90188676, g: 0.32501957, b: 0.32501957, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -502,7 +502,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1299, y: 930}
+  m_AnchoredPosition: {x: 1324, y: 937}
   m_SizeDelta: {x: 300, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &70517729
@@ -574,7 +574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.90188676, g: 0.32501957, b: 0.32501957, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -659,6 +659,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ecb5be714dae87f49b5565cc96f4a4ff, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: ecb5be714dae87f49b5565cc96f4a4ff, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b31f0c5d2a00747828528a91a731dfa3, type: 2}
+    - target: {fileID: -7511558181221131132, guid: ecb5be714dae87f49b5565cc96f4a4ff, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b31f0c5d2a00747828528a91a731dfa3, type: 2}
     - target: {fileID: 919132149155446097, guid: ecb5be714dae87f49b5565cc96f4a4ff, type: 3}
       propertyPath: m_Name
       value: Extra plane
@@ -727,8 +739,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Next
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 151e68562fb084227b3886ba83f2d513, type: 2}
+  m_sharedMaterial: {fileID: -8075190037553908430, guid: 151e68562fb084227b3886ba83f2d513, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -752,8 +764,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1237,15 +1249,15 @@ MonoBehaviour:
       m_Calls: []
   m_text: Tooltip hover text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 151e68562fb084227b3886ba83f2d513, type: 2}
+  m_sharedMaterial: {fileID: -8075190037553908430, guid: 151e68562fb084227b3886ba83f2d513, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278242559
-  m_fontColor: {r: 1, g: 0.7991265, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1765,8 +1777,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Skip Tutorial
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 151e68562fb084227b3886ba83f2d513, type: 2}
+  m_sharedMaterial: {fileID: -8075190037553908430, guid: 151e68562fb084227b3886ba83f2d513, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2155,8 +2167,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: Electrolyzer Stack
-  equipmentDescription: "Number of Cells: 38\n\nCurrent: 2.5 \u2013 7.0 kA/m<sub>2</sub>\n\nVoltage:
-    129.58 V\n\nConnection: Bipolar Stack\n\nConnection Type: Series Connection \n\nStacking
+  equipmentDescription: "Number of Cells: 38\nCurrent: 2.5 \u2013 7.0 kA/m<sub>2</sub>\nVoltage:
+    129.58 V\nConnection: Bipolar Stack\nConnection Type: Series Connection \nStacking
     cells in series, current remains the same in all cells, but the voltage adds
     up. Less heat loss."
 --- !u!114 &487230158
@@ -2559,6 +2571,135 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1187409960}
   m_SourcePrefab: {fileID: 100100000, guid: 0a0eb5fc353629b4dacbc5e40d303e19, type: 3}
+--- !u!1 &583265227
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 583265229}
+  - component: {fileID: 583265228}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &583265228
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583265227}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.203
+  m_Pitch: 0.58
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &583265229
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583265227}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.17617, y: 0.81175, z: 36.6366}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &623784429 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -7713689827175984622, guid: 3ee5250bf08d0f34fb6cc0de6506c7fe, type: 3}
@@ -2635,13 +2776,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 677876278}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.04853458, y: -0, z: -0, w: 0.99882156}
-  m_LocalPosition: {x: -5.06, y: 4.36, z: 55}
+  m_LocalRotation: {x: 0.01605868, y: -0, z: -0, w: 0.99987113}
+  m_LocalPosition: {x: -5.06, y: 4.13, z: 53.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 5.564, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 1.84, y: 0, z: 0}
 --- !u!1 &696332334
 GameObject:
   m_ObjectHideFlags: 0
@@ -2659,7 +2800,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &696332335
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2678,7 +2819,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 255}
-  m_SizeDelta: {x: 230, y: 100}
+  m_SizeDelta: {x: 280, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &696332336
 MonoBehaviour:
@@ -2693,7 +2834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.392}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.8784314}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2804,8 +2945,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 111.4}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: 12, y: 122}
+  m_SizeDelta: {x: 220, y: 65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &739938272
 MonoBehaviour:
@@ -2827,10 +2968,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sample Text
+  m_text: "Product: Hydrogen Gas (Highly Flammable Gas)\nPurity: 99.9% \nOperating
+    Temperature: 25 <sup>O</sup>C\nOperating Pressure: 30 bar\nDensity: 0.0018 g/cm<sup>3</sup>\nMaterial:
+    Low Alloy Steel"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dcfd87f6f848c4610acf796d4a731f50, type: 2}
+  m_sharedMaterial: {fileID: 8265558692111867312, guid: dcfd87f6f848c4610acf796d4a731f50, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2854,19 +2997,19 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 8
-  m_fontSizeBase: 8
+  m_fontSize: 9.5
+  m_fontSizeBase: 9.5
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 12
+  m_characterSpacing: 2
   m_wordSpacing: 0
-  m_lineSpacing: 1
+  m_lineSpacing: 30
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -2885,7 +3028,7 @@ MonoBehaviour:
   m_isOrthographic: 1
   m_isCullingEnabled: 0
   m_horizontalMapping: 0
-  m_verticalMapping: 0
+  m_verticalMapping: 1
   m_uvLineOffset: 0
   m_geometrySortingOrder: 0
   m_IsTextObjectScaleStatic: 0
@@ -2965,8 +3108,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Exit
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dcfd87f6f848c4610acf796d4a731f50, type: 2}
+  m_sharedMaterial: {fileID: 8265558692111867312, guid: dcfd87f6f848c4610acf796d4a731f50, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3076,7 +3219,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.5, y: 189.1}
+  m_AnchoredPosition: {x: -2.5, y: 219}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &765792251
@@ -3099,17 +3242,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sample Title
+  m_text: Hydrogen Gas Tank
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 151e68562fb084227b3886ba83f2d513, type: 2}
+  m_sharedMaterial: {fileID: -8075190037553908430, guid: 151e68562fb084227b3886ba83f2d513, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278248703
+  m_fontColor: {r: 1, g: 0.89344263, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3126,19 +3269,19 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
-  m_characterSpacing: 8
+  m_characterSpacing: 12
   m_wordSpacing: 0
-  m_lineSpacing: 1.2
+  m_lineSpacing: 0
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -3164,7 +3307,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -37.235497, y: 0, z: -11.934715, w: 0}
+  m_margin: {x: -50.111534, y: 0, z: -50.12088, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3370,8 +3513,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 200}
-  m_SizeDelta: {x: 0, y: 160}
+  m_AnchoredPosition: {x: 0, y: 128}
+  m_SizeDelta: {x: 0, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &804818997
 MonoBehaviour:
@@ -3777,7 +3920,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.13207549, g: 0.13207549, b: 0.13207549, a: 0.79607844}
+  m_Color: {r: 0.13207549, g: 0.13207549, b: 0.13207549, a: 0.9490196}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3821,8 +3964,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1372, y: -5.2418}
-  m_SizeDelta: {x: 350, y: 450}
+  m_AnchoredPosition: {x: 1372, y: 6}
+  m_SizeDelta: {x: 375, y: 530}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1005795756
 MonoBehaviour:
@@ -3933,8 +4076,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Cell View
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dcfd87f6f848c4610acf796d4a731f50, type: 2}
+  m_sharedMaterial: {fileID: 8265558692111867312, guid: dcfd87f6f848c4610acf796d4a731f50, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3964,7 +4107,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 1
+  m_fontStyle: 0
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -4383,11 +4526,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: Chlorine Gas tank
-  equipmentDescription: "Product: Chlorine Gas \n\nTwo phases: Liquid at the bottom
-    and gas at the top. At high \npressure, chlorine gas converts to liquid phase.
-    Reduces storage volume.\n\nPurity: 99.9% \n\nOperating Temperature: 30<sup>O</sup>C\n\nOperating
-    Pressure: 10 bar\n\nDensity: 0.0035 g/cm<sup>3</sup> (Gas Phase), 1.47 g/cm<sup>3</sup>
-    (Liquid Phase)\n\nMaterial: Carbon Steel"
+  equipmentDescription: "Product: Chlorine Gas \nTwo phases: Liquid at the bottom
+    and gas at the top. At high pressure, chlorine gas converts to liquid phase.
+    Reduces storage volume.\nPurity: 99.9% \nOperating Temperature: 30<sup>O</sup>C\nOperating
+    Pressure: 10 bar\nDensity: 0.0035 g/cm<sup>3</sup> (Gas Phase), 1.47 g/cm<sup>3</sup>
+    (Liquid Phase)\nMaterial: Carbon Steel"
 --- !u!1 &1187409952 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4273239327366897131, guid: 0a0eb5fc353629b4dacbc5e40d303e19, type: 3}
@@ -4443,27 +4586,20 @@ MonoBehaviour:
   equipmentName: Water Storage Tank
   equipmentDescription: 'Feedstock: Deionized Water
 
-
     Concentration: 100% Pure
     Water
 
-
     Function: Feed to Electrolyzer
 
-
     Operating Temperature: 30 <sup>O</sup>C
-
 
     Operating
     Pressure: 1.013 bar
 
-
     Density: 1.0 g/cm<sup>3</sup>
-
 
     pH level: 14 (Highly
     Alkaline)
-
 
     Material: Stainless Steel'
 --- !u!1 &1192727878 stripped
@@ -4519,7 +4655,7 @@ RectTransform:
   m_GameObject: {fileID: 1268683116}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5112114, y: 0.3987115, z: 0.391375}
+  m_LocalScale: {x: 0.5880465, y: 0.45863786, z: 0.45019868}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 804818996}
@@ -5384,7 +5520,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 870, y: -27}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 180, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1460725512
 MonoBehaviour:
@@ -5741,9 +5877,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: Hydrogen Gas tank
-  equipmentDescription: "Product: Hydrogen Gas (Highly Flammable Gas)\n\nPurity:
-    99.9% \n\nOperating Temperature: 25 <sup>O</sup>C\n\nOperating Pressure: 30 bar\n\nDensity:
-    0.0018 g/cm<sup>3</sup>\n\nMaterial: Low Alloy Steel"
+  equipmentDescription: "Product: Hydrogen Gas (Highly Flammable Gas)\nPurity: 99.9%
+    \nOperating Temperature: 25 <sup>O</sup>C\nOperating Pressure: 30 bar\nDensity:
+    0.0018 g/cm<sup>3</sup>\nMaterial: Low Alloy Steel"
 --- !u!1001 &1553169719
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6086,23 +6222,17 @@ MonoBehaviour:
   equipmentName: Caustic Storage tank
   equipmentDescription: 'Product: Liquid Caustic Soda
 
-
     Concentration: 33% NaOH
     solution
 
-
     Operating Temperature: 30 <sup>O</sup>C
-
 
     Operating Pressure:
     1.013 bar
 
-
     Density: 1.34 g/cm<sup>3</sup>
 
-
     pH level: 14 (Strong Alkaline)
-
 
     Material:
     Stainless Steel'
@@ -6256,8 +6386,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Guide sample text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
-  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 151e68562fb084227b3886ba83f2d513, type: 2}
+  m_sharedMaterial: {fileID: -8075190037553908430, guid: 151e68562fb084227b3886ba83f2d513, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6287,11 +6417,11 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
-  m_characterSpacing: 0
+  m_characterSpacing: 10
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -6319,7 +6449,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -355.1875, y: 0, z: -753.3218, w: 0}
+  m_margin: {x: -446.42358, y: 0, z: -811.82446, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6349,7 +6479,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -283, y: 16}
+  m_AnchoredPosition: {x: -283, y: 27}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1830290261 stripped
@@ -6561,7 +6691,7 @@ Transform:
   m_GameObject: {fileID: 1896094952}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.24, y: 3.37, z: 39.67}
+  m_LocalPosition: {x: -5.24, y: 3.86, z: 39.67}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6795,27 +6925,20 @@ MonoBehaviour:
   equipmentName: Brine Storage Tank
   equipmentDescription: 'Feedstock: Purified NaCl Solution
 
-
     Concentration: 310
     g NaCl / L solution
 
-
     Function: Feed to Electrolyzer (Provides  and  ions)
-
 
     Operating
     Temperature: 75 <sup>O</sup>C
 
-
     Operating Pressure: 1.013 bar
-
 
     Density:
     1.2 g/cm<sup>3</sup>
 
-
     pH level: 4 (Acidic)
-
 
     Material: Stainless Steel'
 --- !u!114 &2003917891
@@ -6998,7 +7121,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 903, y: 930}
+  m_AnchoredPosition: {x: 960, y: 930}
   m_SizeDelta: {x: 300, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2078705208
@@ -7070,7 +7193,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.90188676, g: 0.32501957, b: 0.32501957, a: 1}
+  m_Color: {r: 1, g: 0.24056602, b: 0.24056602, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7268,6 +7391,8 @@ MonoBehaviour:
   orbitSpeed: 100
   orbitDuration: 1
   moveToFinalSpeed: 2
+  audioSource: {fileID: 583265228}
+  transitionSound: {fileID: 8300000, guid: 2bb17f2760bcf43d5ae4a3db48e0388a, type: 3}
 --- !u!1 &2098298229 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2614793246740244351, guid: 3ee5250bf08d0f34fb6cc0de6506c7fe, type: 3}
@@ -7484,8 +7609,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Main Menu
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: dcfd87f6f848c4610acf796d4a731f50, type: 2}
+  m_sharedMaterial: {fileID: 8265558692111867312, guid: dcfd87f6f848c4610acf796d4a731f50, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -7585,3 +7710,4 @@ SceneRoots:
   - {fileID: 123154146}
   - {fileID: 1471033185}
   - {fileID: 1896094953}
+  - {fileID: 583265229}

@@ -17,6 +17,7 @@ public class SimulationController : MonoBehaviour
     public TextMeshProUGUI mNaOHText;
 
     public ElectronSpawner electronSpawner;
+    public AudioSource audioSource;
 
     // Ion particle systems
     public ParticleSystem ps1;
@@ -52,6 +53,7 @@ public class SimulationController : MonoBehaviour
     public float[] mH2Values = { 0, 0, 0, 0 };
     public float[] mNaOHValues = { 0, 0, 0, 0 };
 
+    public float[] soundPitchValues = { 0.25f, 0.45f, 0.65f, 0.85f };
     //----------------------------------
 
     void Start()
@@ -148,6 +150,12 @@ public class SimulationController : MonoBehaviour
         mCL2Text.text = mCL2Values[index].ToString("F2");
         mH2Text.text = mH2Values[index].ToString("F2");
         mNaOHText.text = mNaOHValues[index].ToString("F2");
+
+        //----------------------------------
+        // Sound pitch values
+        //----------------------------------
+        // audioSource.pitch = soundPitchValues[index];
+        audioSource.pitch = Mathf.Clamp(soundPitchValues[index], 0.5f, 1.2f);
     }
 
     //----------------------------------

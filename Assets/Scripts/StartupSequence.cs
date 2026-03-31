@@ -7,6 +7,7 @@ public class StartupSequence : MonoBehaviour
 
     public ParticleSystem[] ionSystems;   // all ions
     public ParticleSystem[] gasSystems;
+    public AudioSource audioSource;
 
     void Start()
     {
@@ -57,5 +58,7 @@ public class StartupSequence : MonoBehaviour
         {
             ps.Play();
         }
+        // start audio sound
+        audioSource.Play();
     }
 }

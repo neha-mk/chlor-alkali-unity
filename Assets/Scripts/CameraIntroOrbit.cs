@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using System.Collections;
 public class CameraIntroOrbit : MonoBehaviour
 {
     public Transform pivot;           // Center point to orbit
@@ -13,9 +13,24 @@ public class CameraIntroOrbit : MonoBehaviour
     private float timer = 0f;
     private bool orbiting = true;
 
+    public AudioSource audioSource;
+    public AudioClip transitionSound;
+
     void StartIntro()
     {
         orbiting = true;
+        Debug.Log("Starting camera intro orbit");
+
+        if (audioSource != null && transitionSound != null)
+        {
+            audioSource.clip = transitionSound;
+            audioSource.time = 2f;
+            audioSource.PlayOneShot(transitionSound);
+            Debug.Log("Played transition sound");
+        } else
+        {
+            Debug.LogWarning("AudioSource or TransitionSound not set on CameraIntroOrbit");
+        }
 
         transform.position = pivot.position + new Vector3(0, 2, -10);
         transform.LookAt(pivot);

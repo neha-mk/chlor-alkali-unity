@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine.EventSystems;
 
 public class CellClickController : MonoBehaviour
 {
@@ -15,26 +16,77 @@ public class CellClickController : MonoBehaviour
     bool animationRunning = false;
     public MonoBehaviour otherCameraScript;
 
+
     void Update()
     {
         if (animationRunning) return;
     }
 
+    IEnumerator ButtonClickAnimation(Transform buttonTransform)
+    {
+        Debug.Log("Starting button click animation");
+        Vector3 originalScale = buttonTransform.localScale;
+        Vector3 pressedScale = originalScale * 0.9f; // shrink
+
+        float duration = 0.1f;
+        float time = 0f;
+
+        // Press down
+        while (time < duration)
+        {
+            buttonTransform.localScale = Vector3.Lerp(originalScale, pressedScale, time / duration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        // Bounce back
+        time = 0f;
+        while (time < duration)
+        {
+            buttonTransform.localScale = Vector3.Lerp(pressedScale, originalScale, time / duration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+
+        buttonTransform.localScale = originalScale;
+    }
+
+    //     // 🔥 Get clicked button automatically
+    // GameObject clickedButton = EventSystem.current.currentSelectedGameObject;
+    // if (clickedButton != null)
+    // {
+    //     StartCoroutine(ButtonClickAnimation(clickedButton.transform));
+    // }
+
     public void TriggerCellView()
     {
+        if (animationRunning) return;
+
         // your existing animation logic here
         // example:
         Debug.Log("Industrial Cell Clicked");
+        
+        
         // Disable other script
         if (otherCameraScript != null)
             otherCameraScript.enabled = false;
 
         StartCoroutine(CellSequence());
     }
+
     public void GoToMainMenu()
     {
+        if (animationRunning) return;
+
         Debug.Log("go to Welcome Scene");
         SceneManager.LoadScene("Welcome Scene");
+    }
+
+    public void LoadIndustryScene()
+    {
+        SceneTracker.previousScene = SceneManager.GetActiveScene().name;
+        // StartCoroutine(PlaySoundAndLoad("Industrial View"));
+        SceneManager.LoadScene("Industrial View");
     }
 
     IEnumerator CellSequence()
@@ -104,5 +156,18 @@ public class CellClickController : MonoBehaviour
             transform.position = Vector3.Lerp(transform.position, target.position, Time.deltaTime * moveSpeed);
             yield return null;
         }
+    }
+
+       public void ExitApplication()
+    {
+        // 🔥 Get clicked button automatically
+        GameObject clickedButton = EventSystem.current.currentSelectedGameObject;
+        Debug.Log("Application Closed");
+
+        Application.Quit();
+
+    #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+    #endif
     }
 }
