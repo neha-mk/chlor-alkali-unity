@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ElectronSpawner : MonoBehaviour
 {
@@ -8,10 +8,31 @@ public class ElectronSpawner : MonoBehaviour
     public float spawnRate = 0.09f;
     public float speed = 1f;
 
+    // 🔥 ADD THIS
+    public float startDelay = 3f;   // adjust this as needed
+
     float timer = 0f;
+    float delayTimer = 0f;
+    bool canSpawn = false;
 
     void Update()
     {
+        // 🔥 HANDLE DELAY FIRST
+        if (!canSpawn)
+        {
+            delayTimer += Time.deltaTime;
+
+            if (delayTimer >= startDelay)
+            {
+                canSpawn = true;
+            }
+            return;
+        }
+
+        //----------------------------------
+        // NORMAL SPAWNING
+        //----------------------------------
+
         timer += Time.deltaTime;
 
         if (timer >= spawnRate)

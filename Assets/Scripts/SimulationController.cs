@@ -20,27 +20,22 @@ public class SimulationController : MonoBehaviour
     public AudioSource audioSource;
 
     // Ion particle systems
-    public ParticleSystem ps1;
-    public ParticleSystem ps2;
-    public ParticleSystem ps3;
-    public ParticleSystem ps4;
-    public ParticleSystem ps5;
-    public ParticleSystem ps6;
+    public ParticleSystem ps1, ps2, ps3, ps4, ps5, ps6;
 
     // Gas particle systems
-    public ParticleSystem gasPS1;
-    public ParticleSystem gasPS2;
+    public ParticleSystem gasPS1, gasPS2;
 
-    // 🔥 Base values (from Inspector)
+    // Base values
     float[] baseSpeeds = new float[6];
     float[] baseEmissionRates = new float[6];
+    float[] baseSizes = new float[6];
+
     float[] baseGasEmissionRates = new float[2];
+    float[] baseGasSizes = new float[2];
 
     float baseElectronSpeed = 1f;
     float baseSpawnRate = 0.09f;
 
-    //----------------------------------
-    // MANUAL VALUES (EDIT THESE)
     //----------------------------------
 
     int[] currentDensityValues = { 2500, 4000, 5500, 7000 };
@@ -54,6 +49,7 @@ public class SimulationController : MonoBehaviour
     public float[] mNaOHValues = { 0, 0, 0, 0 };
 
     public float[] soundPitchValues = { 0.2f, 0.45f, 0.65f, 0.85f };
+
     //----------------------------------
 
     void Start()
@@ -66,39 +62,43 @@ public class SimulationController : MonoBehaviour
         currentSlider.onValueChanged.AddListener(UpdateSimulation);
 
         //----------------------------------
-        // 🔥 STORE ION BASE VALUES
+        // STORE BASE VALUES (IONS)
         //----------------------------------
 
-        ParticleSystem[] ionSystems = { ps1, ps2, ps3, ps4, ps5, ps6 };
+        ParticleSystem[] ions = { ps1, ps2, ps3, ps4, ps5, ps6 };
 
-        for (int i = 0; i < ionSystems.Length; i++)
+        for (int i = 0; i < ions.Length; i++)
         {
-            if (ionSystems[i] == null) continue;
+            if (ions[i] == null) continue;
 
-            var main = ionSystems[i].main;
-            var emission = ionSystems[i].emission;
+            var main = ions[i].main;
+            var emission = ions[i].emission;
 
             baseSpeeds[i] = main.startSpeed.constant;
             baseEmissionRates[i] = emission.rateOverTime.constant;
+            baseSizes[i] = main.startSize.constant;
         }
 
         //----------------------------------
-        // 🔥 STORE GAS BASE VALUES
+        // STORE BASE VALUES (GASES)
         //----------------------------------
 
-        ParticleSystem[] gasSystems = { gasPS1, gasPS2 };
+        ParticleSystem[] gases = { gasPS1, gasPS2 };
 
-        for (int i = 0; i < gasSystems.Length; i++)
+        for (int i = 0; i < gases.Length; i++)
         {
-            if (gasSystems[i] == null) continue;
+            if (gases[i] == null) continue;
 
-            var emission = gasSystems[i].emission;
+            var main = gases[i].main;
+            var emission = gases[i].emission;
+
             baseGasEmissionRates[i] = emission.rateOverTime.constant;
+            baseGasSizes[i] = main.startSize.constant;
         }
 
         //----------------------------------
 
-        UpdateSimulation(currentSlider.value);
+        UpdateSimulation(0);
     }
 
     //----------------------------------
@@ -106,41 +106,44 @@ public class SimulationController : MonoBehaviour
     public void UpdateSimulation(float sliderValue)
     {
         int index = (int)sliderValue;
-
         float currentDensity = currentDensityValues[index];
 
-        currentValueText.text = currentDensity.ToString("0") + " A/m²";
-
-        // ✅ Smooth scaling (prevents extreme jumps)
-        float factor = Mathf.Sqrt(currentDensity / 2500f);
+        currentValueText.text = currentDensity + " A/m²";
 
         //----------------------------------
-        // ELECTRONS
+        // 🔥 TWO DIFFERENT FACTORS
         //----------------------------------
 
-        electronSpawner.speed = baseElectronSpeed * factor;
-        electronSpawner.spawnRate = baseSpawnRate / factor;
+        float ionFactor = GetStepFactor(index); // strong jump
+        float electronFactor = Mathf.Sqrt(currentDensity / 2500f); // smooth
 
         //----------------------------------
-        // ION PARTICLES
+        // ELECTRONS (FIXED)
         //----------------------------------
 
-        UpdateIonParticles(ps1, 0, factor);
-        UpdateIonParticles(ps2, 1, factor);
-        UpdateIonParticles(ps3, 2, factor);
-        UpdateIonParticles(ps4, 3, factor);
-        UpdateIonParticles(ps5, 4, factor);
-        UpdateIonParticles(ps6, 5, factor);
+        electronSpawner.speed = baseElectronSpeed * electronFactor;
+        electronSpawner.spawnRate = baseSpawnRate / electronFactor;
 
         //----------------------------------
-        // GAS PARTICLES
+        // IONS
         //----------------------------------
 
-        UpdateGasParticles(gasPS1, 0, factor);
-        UpdateGasParticles(gasPS2, 1, factor);
+        UpdateIon(ps1, 0, ionFactor);
+        UpdateIon(ps2, 1, ionFactor);
+        UpdateIon(ps3, 2, ionFactor);
+        UpdateIon(ps4, 3, ionFactor);
+        UpdateIon(ps5, 4, ionFactor);
+        UpdateIon(ps6, 5, ionFactor);
 
         //----------------------------------
-        // DISPLAY MANUAL VALUES
+        // GASES
+        //----------------------------------
+
+        UpdateGas(gasPS1, 0, ionFactor);
+        UpdateGas(gasPS2, 1, ionFactor);
+
+        //----------------------------------
+        // UI VALUES
         //----------------------------------
 
         secCL2Text.text = secCL2Values[index].ToString("F2");
@@ -152,45 +155,60 @@ public class SimulationController : MonoBehaviour
         mNaOHText.text = mNaOHValues[index].ToString("F2");
 
         //----------------------------------
-        // Sound pitch values
+        // SOUND
         //----------------------------------
-        // audioSource.pitch = soundPitchValues[index];
+
         audioSource.pitch = Mathf.Clamp(soundPitchValues[index], 0.5f, 1.2f);
     }
 
     //----------------------------------
-    // UPDATE IONS
+    // STEP FACTOR
     //----------------------------------
 
-    void UpdateIonParticles(ParticleSystem ps, int index, float factor)
+    float GetStepFactor(int index)
+    {
+        if (index == 0) return 1f;
+        if (index == 1) return 2f;
+        if (index == 2) return 4f;
+        return 8f;
+    }
+
+    //----------------------------------
+    // IONS
+    //----------------------------------
+
+    void UpdateIon(ParticleSystem ps, int i, float factor)
     {
         if (ps == null) return;
 
         var main = ps.main;
         var emission = ps.emission;
 
-        // ✅ Always scale from ORIGINAL inspector values
-        main.startSpeed = baseSpeeds[index] * factor;
+        main.startSize = baseSizes[i];
 
-        emission.rateOverTime = Mathf.Min(baseEmissionRates[index] * factor, 50f);
+        main.startSpeed = baseSpeeds[i] * (1f + 0.2f * factor);
 
-        // Optional: force reset to avoid leftover particles
-        
+        emission.rateOverTime = baseEmissionRates[i] * factor;
     }
 
     //----------------------------------
-    // UPDATE GAS
+    // GASES
     //----------------------------------
 
-    void UpdateGasParticles(ParticleSystem ps, int index, float factor)
+    void UpdateGas(ParticleSystem ps, int i, float factor)
     {
         if (ps == null) return;
 
+        var main = ps.main;
         var emission = ps.emission;
 
-        emission.rateOverTime = Mathf.Min(baseGasEmissionRates[index] * factor, 50f);
+        main.startSize = baseGasSizes[i];
 
-        // Optional reset
-        
+        emission.rateOverTime = baseGasEmissionRates[i] * (factor * 1.5f);
+
+        emission.SetBursts(new ParticleSystem.Burst[]
+        {
+            new ParticleSystem.Burst(0f, (short)(2 * factor))
+        });
     }
 }

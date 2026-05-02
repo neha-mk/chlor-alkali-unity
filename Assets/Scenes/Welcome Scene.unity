@@ -874,58 +874,58 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: 'The chlor-alkali process is one of the most important industrial electrochemical
-    processes, used worldwide for the large-scale production of chlorine (Cl2), hydrogen
-    (H2), and sodium hydroxide (NaOH). These products are essential for a wide range
-    of applications, including water purification, chemical manufacturing, pharmaceuticals,
-    and the production of everyday materials such as plastics and soaps.
+    processes, used worldwide for the large-scale production of chlorine (Cl<sub>2</sub>),
+    hydrogen (H<sub>2</sub>), and sodium hydroxide (NaOH). These products are essential
+    for a wide range of applications, including water purification, chemical manufacturing,
+    pharmaceuticals, and the production of everyday materials such as plastics and
+    soaps.
 
 
-    This
-    simulation is designed to provide an intuitive and visual understanding of how
-    the chlor-alkali process operates, both at the industrial scale and at the microscopic
-    electrochemical level. The project is divided into two primary views: the Industry
-    View and the Cell View, each offering a different perspective of the process.
+    This simulation is designed to provide an intuitive and visual understanding
+    of how the chlor-alkali process operates, both at the industrial scale and at
+    the microscopic electrochemical level. The project is divided into two primary
+    views: the Industry View and the Cell View, each offering a different perspective
+    of the process.
 
 
-    In
-    the Industry View, users can explore a simplified representation of a chlor-alkali
-    plant. This includes major equipment such as brine storage tanks, pumps, electrolyzers,
-    and product storage units. The goal of this view is to help users understand
-    the overall flow of materials through the plant. Brine (a concentrated sodium
-    chloride solution) enters the system, undergoes electrolysis in the electrolyzer
-    unit, and produces chlorine gas, hydrogen gas, and sodium hydroxide solution.
-    This view emphasizes process flow, equipment interaction, and system-level understanding.
+    In the Industry View, users can explore a simplified representation
+    of a chlor-alkali plant. This includes major equipment such as brine storage
+    tanks, pumps, electrolyzers, and product storage units. The goal of this view
+    is to help users understand the overall flow of materials through the plant.
+    Brine (a concentrated sodium chloride solution) enters the system, undergoes
+    electrolysis in the electrolyzer unit, and produces chlorine gas, hydrogen gas,
+    and sodium hydroxide solution. This view emphasizes process flow, equipment interaction,
+    and system-level understanding.
 
 
-    The
-    Cell View provides a closer look inside the electrolyzer, where the actual electrochemical
-    reactions take place. Within the cell, the electrolyte is separated into two
-    compartments by a membrane. When an electric current is applied, chloride ions
-    (Cl-) move toward the anode, where they lose electrons (oxidation) to form chlorine
-    gas. At the cathode, water molecules gain electrons (reduction) to produce hydrogen
-    gas and hydroxide ions (OH-). Sodium ions (Na+) migrate through the membrane
-    and combine with hydroxide ions to form sodium hydroxide.
+    The Cell View provides a closer look inside
+    the electrolyzer, where the actual electrochemical reactions take place. Within
+    the cell, the electrolyte is separated into two compartments by a membrane. When
+    voltage is applied, chloride ions (Cl<sup>-</sup>) move toward the anode, where
+    they lose electrons (oxidation) to form chlorine gas. At the cathode, water molecules
+    gain electrons (reduction) to produce hydrogen gas and hydroxide ions (OH<sup>-</sup>).
+    Sodium ions (Na<sup>+</sup>) migrate through the membrane and combine with hydroxide
+    ions to form sodium hydroxide.
 
 
-    This simulation
-    visually represents these phenomena using animated particles to depict ion movement,
-    gas evolution, and electron flow. Users can adjust the current density, which
-    directly influences the rate of reactions. As the current increases, the speed
-    of electron flow and ion movement increases, along with the production rates
-    of chlorine, hydrogen, and sodium hydroxide. This helps users understand the
-    relationship between electrical input and chemical output.
+    This simulation visually represents these
+    phenomena using animated particles to depict ion movement, gas evolution, and
+    electron flow. Users can adjust the current density, which directly influences
+    the rate of reactions. As the current increases, the speed of electron flow and
+    ion movement increases, along with the production rates of chlorine, hydrogen,
+    and sodium hydroxide. This helps users understand the relationship between electrical
+    input and chemical output.
 
 
-    Additionally,
-    the simulation provides key output parameters such as Specific Energy Consumption
-    (SEC) and production rates of the products. These values help illustrate the
-    efficiency and performance of the process under different operating conditions.
+    Additionally, the simulation provides key output
+    parameters such as Specific Energy Consumption (SEC) and production rates of
+    the products. These values help illustrate the efficiency and performance of
+    the process under different operating conditions.
 
 
-    Overall,
-    this project aims to bridge the gap between theoretical electrochemistry and
-    real-world industrial applications by offering an interactive and visually engaging
-    learning experience.
+    Overall, this project
+    aims to bridge the gap between theoretical electrochemistry and real-world industrial
+    applications by offering an interactive and visually engaging learning experience.
 
 
 '

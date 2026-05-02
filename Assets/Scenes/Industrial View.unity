@@ -2167,7 +2167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EquipmentData
   equipmentName: Electrolyzer Stack
-  equipmentDescription: "Number of Cells: 38\nCurrent: 2.5 \u2013 7.0 kA/m<sub>2</sub>\nVoltage:
+  equipmentDescription: "Number of Cells: 38\nCurrent: 2.5 \u2013 7.0 kA/m<sup>2</sup>\nVoltage:
     129.58 V\nConnection: Bipolar Stack\nConnection Type: Series Connection \nStacking
     cells in series, current remains the same in all cells, but the voltage adds
     up. Less heat loss."
@@ -6928,19 +6928,20 @@ MonoBehaviour:
     Concentration: 310
     g NaCl / L solution
 
-    Function: Feed to Electrolyzer (Provides  and  ions)
+    Function: Feed to Electrolyzer (Provides  Na+ and Cl- 
+    ions)
 
-    Operating
-    Temperature: 75 <sup>O</sup>C
+    Operating Temperature: 75 <sup>O</sup>C
 
-    Operating Pressure: 1.013 bar
+    Operating Pressure: 1.013
+    bar
 
-    Density:
-    1.2 g/cm<sup>3</sup>
+    Density: 1.2 g/cm<sup>3</sup>
 
     pH level: 4 (Acidic)
 
-    Material: Stainless Steel'
+    Material:
+    Stainless Steel'
 --- !u!114 &2003917891
 MonoBehaviour:
   m_ObjectHideFlags: 0
